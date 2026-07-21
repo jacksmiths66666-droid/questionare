@@ -1,0 +1,23 @@
+# 原始/受限数据与大型二进制材料不进入 GitHub
+D081_TISP/dataset.csv
+D081_TISP/*.pdf
+D081_TISP/questionnaire/*.pdf
+D081_TISP/questionnaire/*.qsf
+
+# 完整逐行标记表和人工复核队列可能包含原始作答值
+outputs/screening/*flags.csv
+outputs/screening/*review_queue.csv
+
+# Python/Node 运行缓存与本地环境
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.env
+
+# 本地编辑器与系统文件
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
