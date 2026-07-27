@@ -6,7 +6,7 @@
   ③ 马氏距离（按国家分组）
   ④ 奇偶一致性（仅 TRUST_SCI）
 
-输出信号叠加结果（0→NORMAL, 1→MEDIUM, ≥2→HIGH），
+输出信号叠加结果（0→NORMAL, 1→MEDIUM, ≥2→HIGH, IDN/PRT→VERIFY），
 以及一票无效标记（全量表缺失 OR 开放题纯乱码）。
 """
 
@@ -526,6 +526,9 @@ def run_screening(input_path: Path = DEFAULT_INPUT, output_dir: Path = DEFAULT_O
     flags["is_verify"] = is_verify.astype("int8")
     flags["entropy_threshold"] = entropy_threshold
 
+    # VERIFY 降级：NORMAL + is_verify → 标为 VERIFY 以便在 CSV 中直接筛选
+    flags.loc[(flags["is_verify"] == 1) & (flags["screening_tier"] == "NORMAL"), "screening_tier"] = "VERIFY"
+
     if flags.columns.duplicated().any():
         raise AssertionError("输出列名重复")
     if len(flags) != len(raw) or flags[original_columns].astype(str).equals(raw.astype(str)) is False:
@@ -555,8 +558,8 @@ def run_screening(input_path: Path = DEFAULT_INPUT, output_dir: Path = DEFAULT_O
     ).reset_index()
     summary.to_csv(summary_path, index=False, encoding="utf-8-sig")
 
-    # 复核队列（MEDIUM + HIGH + VERIFY，排除一票无效）
-    in_queue = ((flags["screening_tier"] != "NORMAL") | (flags["is_verify"] == 1)) & (flags["veto_any"] == 0)
+    # 复核队列（排除一票无效）
+    in_queue = (flags["screening_tier"] != "NORMAL") & (flags["veto_any"] == 0)
     queue_cols = [
         "row_id", "COUNTRY_CODE", "COUNTRY_NAME",
         "screening_tier", "signal_count", "is_verify",
@@ -607,11 +610,12 @@ def run_screening(input_path: Path = DEFAULT_INPUT, output_dir: Path = DEFAULT_O
                 "verify_countries": sorted(VERIFY_COUNTRIES),
                 "rule": "ATTCHECK_NUMBER!=213 OR ATTCHECK_RES!=1 → signal; IDN/PRT → verify",
             },
-            "signal_stacking": {
-                "0": "NORMAL (no review)",
-                "1": "MEDIUM",
-                ">=2": "HIGH",
-            },
+        "signal_stacking": {
+            "0": "NORMAL (no review)",
+            "1": "MEDIUM",
+            ">=2": "HIGH",
+            "verify_downgrade": "VERIFY (IDN/PRT attention downgrade)",
+        },
             "one_vote_veto": {
                 "all_missing": "all closed-end items empty",
                 "gibberish": "entropy<5pct | symbol_ratio>0.5 | digit_ratio>0.8 | encoding_garble",

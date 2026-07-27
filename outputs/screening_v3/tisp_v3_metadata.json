@@ -1,7 +1,7 @@
 {
-  "run_utc": "2026-07-27T09:59:33.984255+00:00",
+  "run_utc": "2026-07-27T15:37:22.246237+00:00",
   "script": "D:\\开山\\收集数据\\D081_TISP\\analysis\\04_screen_tisp_v3.py",
-  "script_sha256": "2c214da36601f254695c3763cc13d49264ac44ac283590017969a754f9acf505",
+  "script_sha256": "a87adc9a5cba8eedabf18303d6c43f915e4bf9d8546011fe353ffd263adc5d87",
   "input_path": "D:\\开山\\收集数据\\D081_TISP\\D081_TISP\\dataset.csv",
   "input_sha256": "b131e509aa88e58ae1a437a5b46684b4474610428f5cc99df4d0c5660849a763",
   "input_rows": 71922,
@@ -64,7 +64,8 @@
     "signal_stacking": {
       "0": "NORMAL (no review)",
       "1": "MEDIUM",
-      ">=2": "HIGH"
+      ">=2": "HIGH",
+      "verify_downgrade": "VERIFY (IDN/PRT attention downgrade)"
     },
     "one_vote_veto": {
       "all_missing": "all closed-end items empty",
@@ -77,7 +78,7 @@
     "signal_longstring": 756,
     "signal_mahalanobis": 397,
     "signal_odd_even": 579,
-    "normal": 70195,
+    "normal": 69936,
     "medium": 1718,
     "high": 9,
     "veto": 13816,
