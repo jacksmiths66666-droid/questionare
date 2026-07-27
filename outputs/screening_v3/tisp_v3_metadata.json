@@ -1,0 +1,706 @@
+{
+  "run_utc": "2026-07-27T09:59:33.984255+00:00",
+  "script": "D:\\开山\\收集数据\\D081_TISP\\analysis\\04_screen_tisp_v3.py",
+  "script_sha256": "2c214da36601f254695c3763cc13d49264ac44ac283590017969a754f9acf505",
+  "input_path": "D:\\开山\\收集数据\\D081_TISP\\D081_TISP\\dataset.csv",
+  "input_sha256": "b131e509aa88e58ae1a437a5b46684b4474610428f5cc99df4d0c5660849a763",
+  "input_rows": 71922,
+  "input_columns": 126,
+  "country_n": 68,
+  "params": {
+    "md": {
+      "core_items": [
+        "TRUST_SCI_expert",
+        "TRUST_SCI_honest",
+        "TRUST_SCI_concerned",
+        "TRUST_SCI_open",
+        "TRUST_SCI_intellig",
+        "TRUST_SCI_ethical",
+        "TRUST_SCI_improve",
+        "TRUST_SCI_trans",
+        "TRUST_SCI_qualified",
+        "TRUST_SCI_sincere",
+        "TRUST_SCI_otherint",
+        "TRUST_SCI_otherviews",
+        "SCIPOP_common",
+        "SCIPOP_good",
+        "SCIPOP_advantage",
+        "SCIPOP_cahoots",
+        "SCIPOP_influence",
+        "SCIPOP_involved",
+        "SCIPOP_lifeexp",
+        "SCIPOP_rely",
+        "OUTSPOKEN_othersthink",
+        "OUTSPOKEN_isolate",
+        "OUTSPOKEN_against",
+        "SDO_allgroupsconsider",
+        "SDO_notpushequality",
+        "SDO_equalityideal",
+        "SDO_superiordominate"
+      ],
+      "min_country_n": 135,
+      "max_missing": 5,
+      "quantile": 0.995,
+      "method": "corrcoef per country; sqrt(mahalanobis)"
+    },
+    "global_longstring": {
+      "n_items": 71,
+      "threshold_method": "0.99 quantile (data-driven)",
+      "threshold_value": 32.0
+    },
+    "odd_even": {
+      "scale": "TRUST_SCI",
+      "percentile": 0.01,
+      "min_pairs": 4,
+      "threshold_value": -0.8783100656536799
+    },
+    "attention": {
+      "verify_countries": [
+        "IDN",
+        "PRT"
+      ],
+      "rule": "ATTCHECK_NUMBER!=213 OR ATTCHECK_RES!=1 → signal; IDN/PRT → verify"
+    },
+    "signal_stacking": {
+      "0": "NORMAL (no review)",
+      "1": "MEDIUM",
+      ">=2": "HIGH"
+    },
+    "one_vote_veto": {
+      "all_missing": "all closed-end items empty",
+      "gibberish": "entropy<5pct | symbol_ratio>0.5 | digit_ratio>0.8 | encoding_garble",
+      "gibberish_entropy_threshold": 2.75
+    }
+  },
+  "counts": {
+    "signal_attention": 4,
+    "signal_longstring": 756,
+    "signal_mahalanobis": 397,
+    "signal_odd_even": 579,
+    "normal": 70195,
+    "medium": 1718,
+    "high": 9,
+    "veto": 13816,
+    "verify": 302,
+    "review_queue": 1552
+  },
+  "md_country_details": [
+    {
+      "country_code": "ALB",
+      "country_n": 377,
+      "eligible_n": 377,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.516448426620387,
+      "flagged_n": 2
+    },
+    {
+      "country_code": "ARG",
+      "country_n": 509,
+      "eligible_n": 509,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.016051353013584,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "AUS",
+      "country_n": 3560,
+      "eligible_n": 3560,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.514117862467597,
+      "flagged_n": 18
+    },
+    {
+      "country_code": "AUT",
+      "country_n": 1076,
+      "eligible_n": 1076,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.098225558819106,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "BEL",
+      "country_n": 2052,
+      "eligible_n": 2048,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.992913808689465,
+      "flagged_n": 11
+    },
+    {
+      "country_code": "BGD",
+      "country_n": 496,
+      "eligible_n": 495,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.275416753589223,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "BGR",
+      "country_n": 497,
+      "eligible_n": 497,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.710277018773699,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "BOL",
+      "country_n": 548,
+      "eligible_n": 547,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.15721654369842,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "BRA",
+      "country_n": 1336,
+      "eligible_n": 1334,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.10609482810174,
+      "flagged_n": 7
+    },
+    {
+      "country_code": "BWA",
+      "country_n": 508,
+      "eligible_n": 508,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.974296667497192,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "CAN",
+      "country_n": 2535,
+      "eligible_n": 2535,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.754021887153545,
+      "flagged_n": 13
+    },
+    {
+      "country_code": "CHE",
+      "country_n": 1018,
+      "eligible_n": 1017,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.283571393463482,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "CHL",
+      "country_n": 1058,
+      "eligible_n": 1058,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.837233246221283,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "CHN",
+      "country_n": 526,
+      "eligible_n": 526,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.568135168541925,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "CIV",
+      "country_n": 514,
+      "eligible_n": 513,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.063502686922192,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "CMR",
+      "country_n": 505,
+      "eligible_n": 505,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.97982161620649,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "COD",
+      "country_n": 408,
+      "eligible_n": 408,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.855783888916712,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "COL",
+      "country_n": 514,
+      "eligible_n": 513,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.548268203003143,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "CRI",
+      "country_n": 573,
+      "eligible_n": 573,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.91500540459954,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "CYP",
+      "country_n": 509,
+      "eligible_n": 508,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.741391899221592,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "CZE",
+      "country_n": 502,
+      "eligible_n": 502,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.66554603732632,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "DEU",
+      "country_n": 8134,
+      "eligible_n": 8128,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.647416806867975,
+      "flagged_n": 41
+    },
+    {
+      "country_code": "DNK",
+      "country_n": 1227,
+      "eligible_n": 1226,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.645611894795993,
+      "flagged_n": 7
+    },
+    {
+      "country_code": "EGY",
+      "country_n": 512,
+      "eligible_n": 512,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.846921955933345,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "ESP",
+      "country_n": 1015,
+      "eligible_n": 1015,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.392478468104809,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "ETH",
+      "country_n": 455,
+      "eligible_n": 455,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.89429501378885,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "FIN",
+      "country_n": 1009,
+      "eligible_n": 1007,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.193450454892853,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "FRA",
+      "country_n": 2029,
+      "eligible_n": 2027,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.779881590662795,
+      "flagged_n": 11
+    },
+    {
+      "country_code": "GBR",
+      "country_n": 2008,
+      "eligible_n": 2008,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.128475934516386,
+      "flagged_n": 11
+    },
+    {
+      "country_code": "GEO",
+      "country_n": 528,
+      "eligible_n": 528,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.40047299745632,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "GHA",
+      "country_n": 509,
+      "eligible_n": 509,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.241980805484625,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "GRC",
+      "country_n": 1449,
+      "eligible_n": 1447,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.70840059424676,
+      "flagged_n": 8
+    },
+    {
+      "country_code": "HKG",
+      "country_n": 599,
+      "eligible_n": 598,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.700743491129224,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "HUN",
+      "country_n": 508,
+      "eligible_n": 508,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.993008970152042,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "IDN",
+      "country_n": 2104,
+      "eligible_n": 2104,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.27649993758184,
+      "flagged_n": 11
+    },
+    {
+      "country_code": "IND",
+      "country_n": 502,
+      "eligible_n": 502,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.547409332950107,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "IRL",
+      "country_n": 506,
+      "eligible_n": 506,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.076822367518895,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "ISR",
+      "country_n": 1049,
+      "eligible_n": 1048,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.483626973957728,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "ITA",
+      "country_n": 1520,
+      "eligible_n": 1520,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.845552673880798,
+      "flagged_n": 8
+    },
+    {
+      "country_code": "JPN",
+      "country_n": 1004,
+      "eligible_n": 1004,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.02645529813738,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "KAZ",
+      "country_n": 520,
+      "eligible_n": 520,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.126075954503358,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "KEN",
+      "country_n": 513,
+      "eligible_n": 513,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.437201491874157,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "KOR",
+      "country_n": 500,
+      "eligible_n": 500,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.148448064779426,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "MAR",
+      "country_n": 503,
+      "eligible_n": 503,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.592231405412443,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "MEX",
+      "country_n": 532,
+      "eligible_n": 532,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.193090650062297,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "MYS",
+      "country_n": 1046,
+      "eligible_n": 1044,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.928614106252734,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "NGA",
+      "country_n": 1040,
+      "eligible_n": 1040,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.813344341855087,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "NIC",
+      "country_n": 499,
+      "eligible_n": 498,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.252612640575146,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "NLD",
+      "country_n": 1427,
+      "eligible_n": 1427,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.050311633967159,
+      "flagged_n": 8
+    },
+    {
+      "country_code": "NOR",
+      "country_n": 513,
+      "eligible_n": 513,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.92995563273844,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "NZL",
+      "country_n": 2028,
+      "eligible_n": 2027,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.374191436173263,
+      "flagged_n": 11
+    },
+    {
+      "country_code": "PER",
+      "country_n": 513,
+      "eligible_n": 513,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.94537656999668,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "PHL",
+      "country_n": 661,
+      "eligible_n": 661,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.7088818261639,
+      "flagged_n": 4
+    },
+    {
+      "country_code": "POL",
+      "country_n": 3037,
+      "eligible_n": 3037,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.328552435247753,
+      "flagged_n": 16
+    },
+    {
+      "country_code": "PRT",
+      "country_n": 502,
+      "eligible_n": 502,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.823265177293385,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "ROU",
+      "country_n": 444,
+      "eligible_n": 444,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.828336488816216,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "RUS",
+      "country_n": 1518,
+      "eligible_n": 1518,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.937758612633953,
+      "flagged_n": 8
+    },
+    {
+      "country_code": "SRB",
+      "country_n": 575,
+      "eligible_n": 575,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.337226558475924,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "SVK",
+      "country_n": 543,
+      "eligible_n": 543,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.809038875079036,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "SVN",
+      "country_n": 528,
+      "eligible_n": 528,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.242369841042498,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "SWE",
+      "country_n": 1013,
+      "eligible_n": 1010,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.401449218133523,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "TUR",
+      "country_n": 508,
+      "eligible_n": 508,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.119334080097206,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "TWN",
+      "country_n": 1206,
+      "eligible_n": 1206,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.509600701581597,
+      "flagged_n": 7
+    },
+    {
+      "country_code": "UGA",
+      "country_n": 513,
+      "eligible_n": 513,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.95870094014354,
+      "flagged_n": 3
+    },
+    {
+      "country_code": "UKR",
+      "country_n": 1020,
+      "eligible_n": 1019,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.159722158510942,
+      "flagged_n": 6
+    },
+    {
+      "country_code": "URY",
+      "country_n": 325,
+      "eligible_n": 323,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 8.750920052568597,
+      "flagged_n": 2
+    },
+    {
+      "country_code": "USA",
+      "country_n": 2580,
+      "eligible_n": 2580,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 10.845345239937538,
+      "flagged_n": 13
+    },
+    {
+      "country_code": "ZAF",
+      "country_n": 1027,
+      "eligible_n": 1027,
+      "computable": true,
+      "reason": "",
+      "threshold_p995": 9.05206987598203,
+      "flagged_n": 6
+    }
+  ],
+  "output_files": {
+    "flags": "D:\\开山\\收集数据\\D081_TISP\\outputs\\screening_v3\\tisp_v3_flags.csv",
+    "summary": "D:\\开山\\收集数据\\D081_TISP\\outputs\\screening_v3\\tisp_v3_signal_summary.csv",
+    "review_queue": "D:\\开山\\收集数据\\D081_TISP\\outputs\\screening_v3\\tisp_v3_review_queue.csv"
+  }
+}
