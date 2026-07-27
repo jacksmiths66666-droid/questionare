@@ -4,9 +4,9 @@ D081_TISP/*.pdf
 D081_TISP/questionnaire/*.pdf
 D081_TISP/questionnaire/*.qsf
 
-# 完整逐行标记表和人工复核队列可能包含原始作答值
-outputs/screening/*flags.csv
-outputs/screening/*review_queue.csv
+# 历史归档与本地缓存
+_archive/
+codex对话历史/
 
 # Python/Node 运行缓存与本地环境
 __pycache__/
