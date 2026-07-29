@@ -38,6 +38,14 @@ from scipy.spatial.distance import mahalanobis
 from numpy.linalg import inv
 from collections import Counter
 
+
+# ====== 自动定位仓库根目录 ======
+import os, sys
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))          # scripts/ 目录
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)                          # 仓库根目录
+
+
+
 # ============================================================================
 #  模块 1: config —— 所有参数与路径
 # ============================================================================
@@ -45,10 +53,10 @@ class Config:
     """集中管理所有文件路径、阈值和题目组定义。"""
 
     # ---- 文件路径 ----
-    CSV_IN      = r"C:\Users\34611\Desktop\问卷数据清洗\D087_政治社会学_西班牙抗议参与_2019_完整交付\02_官方原始数据\02_PROTEiCA_survey_EN.csv"
-    CSV_CLEAN   = r"C:\Users\34611\Desktop\问卷数据清洗\有效问卷.csv"
-    CSV_INVALID = r"C:\Users\34611\Desktop\问卷数据清洗\无效问卷_待复核.csv"
-    CSV_DETAIL  = r"C:\Users\34611\Desktop\问卷数据清洗\筛查明细.csv"
+    CSV_IN      = os.path.join(REPO_ROOT, "data", "raw", "02_PROTEiCA_survey_EN.csv")
+    CSV_CLEAN   = os.path.join(REPO_ROOT, "output", "有效问卷.csv")
+    CSV_INVALID = os.path.join(REPO_ROOT, "output", "无效问卷_待复核.csv")
+    CSV_DETAIL  = os.path.join(REPO_ROOT, "output", "筛查明细.csv")
 
     # ---- 原始数据总人数（用于最终统计口径） ----
     N_ORIGINAL = 2159
@@ -526,6 +534,14 @@ class Reporter:
         print(f"  |-- 最终保留: {kept} 人 ({kept/cfg.N_ORIGINAL*100:.1f}%)")
         print("=" * 60)
         print("如需调整阈值，修改 Config 类中的 DUR_MIN/MAHA_TH/LONG_TH/DKNA_TH 后重新运行。")
+
+
+# ====== 自动定位仓库根目录 ======
+import os, sys
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))          # scripts/ 目录
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)                          # 仓库根目录
+
+
 
 # ============================================================================
 #  模块 10: main —— 主流程
