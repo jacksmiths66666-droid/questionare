@@ -2,7 +2,7 @@
 2813,AUS,Australia,HIGH,2,0,mahalanobis_outlier;odd_even_low,0,0,1,1,0,0,0,0,0,0,5.0,11.50825388563279,-0.8881716301507393,,Trusted sources,213,1,18.0,1.0,3,18-29,Australia/Oceania,invalid,,可信来源
 25947,SVN,Slovenia,HIGH,2,0,longstring_exceed;mahalanobis_outlier,0,1,1,0,0,0,0,0,0,0,35.0,10.392890523940652,0.6301902204663264,,-99,213,1,20.0,1.0,3,18-29,Europe,invalid,,-99
 29328,DEU,Germany,HIGH,2,0,mahalanobis_outlier;odd_even_low,0,0,1,1,0,0,0,0,0,0,4.0,13.562247065766076,-1.0,alle,,213,1,48.0,2.0,4,40-49,Europe,invalid,全部,
-35055,FRA,France,HIGH,2,0,mahalanobis_outlier;odd_even_low,0,0,1,1,0,0,0,0,0,0,12.0,11.168062047849403,-0.8944271909999159,La médecine beneficie le plus de la science avec les recherches scientifiques et les avancées technologiques ,,213,1,35.0,1.0,4,30-39,Europe,unsure,医学通过科学研究和技术进步从科学中获益最多,
+35055,FRA,France,HIGH,2,0,mahalanobis_outlier;odd_even_low,0,0,1,1,0,0,0,0,0,0,12.0,11.168062047849403,-0.8944271909999159,La médecine beneficie le plus de la science avec les recherches scientifiques et les avancées technologiques ,,213,1,35.0,1.0,4,30-39,Europe,valid1,医学通过科学研究和技术进步从科学中获益最多,
 39983,GBR,United Kingdom,HIGH,2,0,longstring_exceed;mahalanobis_outlier,0,1,1,0,0,0,0,0,0,0,54.0,10.269587394464995,,Curling things. Pity the Chinese ones created covid,,213,1,43.0,1.0,3,40-49,Europe,invalid,冰壶的东西。可惜中国人创造了新冠病毒,
 46657,IND,India,HIGH,2,0,longstring_exceed;odd_even_low,0,1,0,1,0,0,0,0,0,0,35.0,5.595968047897347,-1.0,useful inthe future ,,213,1,57.0,1.0,4,50-59,Asia,invalid,将来有用的,
 38552,PRT,Portugal,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,7.0,5.538498432206212,-0.1,"a humanidade, pois a ciência descobre a cura para muitas doenças",a sua dedicação ao trabalho,213,4,48.0,0.0,4,40-49,Europe,valid2,人类，科学发现了许多疾病的治疗方法,你对工作的奉献精神
@@ -98,7 +98,7 @@ Na medida em que possibilita avanços nas mais variadas áreas ",O rigor da inve
 43293,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,15.0,3.4272977749665747,,,Teori yang dia sampaikan bisa dibuktikan secara ilmiah,213,3,54.0,0.0,4,50-59,Asia,valid1,,他所传达的理论可以被科学证明
 43294,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,25.0,6.2384700918443405,0.0,"Manusia, karena dengan ilmu manusia dapat mendapatkan keuntungan",,213,4,23.0,0.0,4,18-29,Asia,valid1,人类，因为有了知识人类就可以获得利益,
 43307,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,8.0,3.961006626304487,1.0,"Anak anak karena mereka dalam masa pengenalan ,perkembangan dan rasa ingin tau yang tinggi sehingga bisa mudah diingat dan dipelajari",,213,3,25.0,0.0,3,18-29,Asia,valid1,孩子因为处于入门、发展和好奇心较高的时期，所以很容易记住和学习,
-43310,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,6.103324245953007,-0.2970442628930023,Manusia karena bertambah pintar,,213,3,26.0,1.0,4,18-29,Asia,unsure,人类变得越来越聪明,
+43310,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,6.103324245953007,-0.2970442628930023,Manusia karena bertambah pintar,,213,3,26.0,1.0,4,18-29,Asia,valid1,人类变得越来越聪明,
 43322,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,16.0,4.860102815070011,0.3162277660168379,,ilmuwan,213,3,,0.0,3,,Asia,invalid,,科学家
 43326,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,22.0,2.95745165729186,,"Pihak kesehatan, media massa, pendidikan, seluruh masyarakat",,213,4,21.0,1.0,3,18-29,Asia,valid1,健康、大众媒体、教育、整个社区,
 43327,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,12.0,3.758413444985876,0.4472135954999579,"Ilmu Pengetahuan sangat penting, apalagi di era seperti saat ini yang segala macam informasi dapat dengan mudah didapat",,213,4,45.0,0.0,4,40-49,Asia,valid1,知识非常重要，尤其是在当今这样一个各种信息都可以轻易获取的时代,
@@ -114,7 +114,7 @@ Na medida em que possibilita avanços nas mais variadas áreas ",O rigor da inve
 43429,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,4.727033682933597,-0.3162277660168379,,karena pengetahuanya cukup tinggi dan telah tereuji,213,4,49.0,0.0,3,40-49,Asia,valid1,,因为他的学识相当高并且经过了考验
 43431,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,10.0,3.917020602823181,0.6123724356957946,,selama omongannya masuk dia akal,213,4,54.0,0.0,3,50-59,Asia,valid1,,只要他说的有道理他就有道理
 43436,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,20.0,3.0398646977714305,,,Temuan berdasarkan penelitian dan fakta yang ada serta telah melakukan percobaan dan telah berhasil. Hasil yang transparan tidak ada manipulasi data penelitian,213,3,30.0,0.0,4,30-39,Asia,valid1,,调查结果基于现有的研究和事实，并进行了实验并取得了成功。结果透明，不操纵研究数据
-43438,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,29.0,3.317893902219494,,,Tidak tahu,213,3,34.0,1.0,3,30-39,Asia,unsure,,不知道
+43438,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,29.0,3.317893902219494,,,Tidak tahu,213,3,34.0,1.0,3,30-39,Asia,invalid,,不知道
 43451,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,13.0,5.049880633508774,,Kita,,213,4,22.0,1.0,3,18-29,Asia,valid1,我们,
 43468,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,7.0,3.543042311346545,,masyarakat berkat penemuan - penemuan yang bisa diterapkan di berbagai aspek,,213,3,50.0,1.0,4,50-59,Asia,valid1,社会得益于可以应用于各个方面的发现,
 43471,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,24.0,3.772007001080512,0.6324555320336759,"Semua mahluk hidup Karena dapat diketahui, dipahami, dimengerti tentang alam semesta",,213,3,59.0,1.0,4,50-59,Asia,valid1,所有生物因为他们能够认识、理解、了解宇宙,
@@ -123,10 +123,10 @@ Na medida em que possibilita avanços nas mais variadas áreas ",O rigor da inve
 43487,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,9.0,4.409695156769392,0.4472135954999579,manusia . karena manusia memiliki akal,,213,3,33.0,1.0,4,30-39,Asia,valid1,男人 。因为人类有理性,
 43503,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,9.0,5.360960250280493,0.4152273992686998,,Penjelasan dari hasil penelitiannya dan bukti dari hasil yang dia pelajari. ,213,4,44.0,1.0,4,40-49,Asia,valid1,,对他的研究结果的解释和他研究结果的证据。
 43507,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,9.0,3.631281031339108,,Manusia karena orang di dunia ini pasti membutuhkan suatu pengetahuan.,,213,4,47.0,1.0,3,40-49,Asia,valid1,人类，因为这个世界上的人肯定需要知识。,
-43508,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,23.0,2.613373951850972,,Tidak tahu,,213,4,30.0,0.0,4,30-39,Asia,unsure,不知道,
+43508,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,23.0,2.613373951850972,,Tidak tahu,,213,4,30.0,0.0,4,30-39,Asia,invalid,不知道,
 43509,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,4.750206776030919,,,ilmuwan yang ketika berbicara sesuai fakta dan tidak mengada-ada,213,3,22.0,0.0,4,18-29,Asia,valid1,,科学家按事实说话，不捏造事实
 43539,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,11.0,3.490855036821248,0.2,manusia tentunya,,213,4,37.0,1.0,4,30-39,Asia,valid1,当然是人类,
-43550,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,22.0,2.3109846678037584,,,Karena dapat di mengerti,213,4,20.0,0.0,3,18-29,Asia,unsure,,因为可以理解
+43550,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,22.0,2.3109846678037584,,,Karena dapat di mengerti,213,4,20.0,0.0,3,18-29,Asia,valid1,,因为可以理解
 43556,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,9.0,2.728589760720628,,,"Y
 ",213,3,47.0,1.0,4,40-49,Asia,invalid,,是
 43562,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,12.0,4.8397589450110745,0.8783100656536799,,karena ahli dibidangnya dan lebih kredibel,213,4,32.0,0.0,4,30-39,Asia,valid1,,因为他们是各自领域的专家并且更可信
@@ -144,7 +144,7 @@ Karena sangat bermanfaat",,213,4,53.0,0.0,4,50-59,Asia,valid1,"社会
 43638,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,17.0,4.974654589951876,0.0,"semua umat manusia,,dengan ilmu bisa memudahkan dan dimudahkan tp blum tentu mudah melakukannya",,213,3,44.0,1.0,4,40-49,Asia,valid1,所有人类，有了知识，事情就会变得越来越容易，但做起来却不一定容易,
 43639,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,5.066964942856149,-0.25,Kita semua diuntungkan ,,213,4,34.0,1.0,4,30-39,Asia,valid1,我们都受益,
 43642,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,28.0,2.271580270962228,,"Kita sendiri, jadi lebih banyak tau mengenai banyak hal",,213,4,36.0,1.0,4,30-39,Asia,valid1,我们自己对很多事情了解得更多,
-43647,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,4.268138765201287,-0.4472135954999579,,Kita semu diuntungkan,213,4,34.0,1.0,4,30-39,Asia,unsure,,我们都受益
+43647,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,4.268138765201287,-0.4472135954999579,,Kita semu diuntungkan,213,4,34.0,1.0,4,30-39,Asia,valid1,,我们都受益
 43664,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,24.0,3.94176684680048,0.7071067811865476,pada dasarnya kita semua diuntungkan dengan adanya ilmu pengetahuan dan penemuan penamuan terbarunya  bergantung dari sudut mana kita melihatnya dan bagaimana kita menyikapinya akan tetapi pada saat kondisi seperti ini lebaih banyak mereka menyikapinya dari segi keuntungan semata imbas dari semua hal baru dikesampingkan,,213,3,50.0,1.0,3,50-59,Asia,valid1,基本上，我们都受益于科学的存在和最新的发现，这取决于我们从哪个角度看待它以及我们如何对它做出反应，但在这样的情况下，更多的人从利润的角度对其做出反应，所有新事物的影响都被抛在了一边。,
 43665,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,6.535368411551415,0.1581138830084189,yang punya pendidikan tertinggi,,213,3,20.0,1.0,3,18-29,Asia,valid1,谁的教育程度最高,
 43679,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,13.0,6.511383716588836,,,bisa di buktikan dulu,213,3,25.0,1.0,3,18-29,Asia,valid1,,可以先证明
@@ -159,7 +159,7 @@ Karena sangat bermanfaat",,213,4,53.0,0.0,4,50-59,Asia,valid1,"社会
 43731,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,12.0,2.7584518334570816,,,jika sudah ada hasil riset,213,3,43.0,0.0,4,40-49,Asia,valid1,,如果已经有研究结果
 43733,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,22.0,2.7816391089055297,,"kita semua ,karena kita akan mengetahui lebih cepat mengenai iptek secara lebih cepat dan real time
 ",,213,3,45.0,1.0,4,40-49,Asia,valid1,我们所有人，因为我们将更快、更实时地了解更多科学技术,
-43734,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,10.0,3.679772179113374,0.5,Tidak ada komentar. Terima kasih.,,213,4,28.0,1.0,4,18-29,Asia,unsure,没有意见。谢谢。,
+43734,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,10.0,3.679772179113374,0.5,Tidak ada komentar. Terima kasih.,,213,4,28.0,1.0,4,18-29,Asia,invalid,没有意见。谢谢。,
 43735,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,24.0,3.854888882582344,1.0,,Jujur dan sesuai,213,3,53.0,0.0,4,50-59,Asia,valid1,,诚实、适当
 43738,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,12.0,6.890858959440301,0.108465228909328,"orang yang share ilmunya, karna berbuat kebaikan",,213,3,23.0,1.0,3,18-29,Asia,valid1,分享知识、行善的人,
 43740,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,3.0,3.63581067739524,0.3162277660168379,,"karena seorang ilmuwan telah melakukan penelitian,sehingga apa yang d hasilkannya kemungkinan dapat dipercaya",213,4,40.0,0.0,4,40-49,Asia,valid1,,因为科学家进行过研究，所以他的成果可能是值得信赖的
@@ -212,7 +212,7 @@ Karena sangat bermanfaat",,213,4,53.0,0.0,4,50-59,Asia,valid1,"社会
 44071,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,9.0,3.056545595864052,,orang yang memanfaatkan dengan baik ilmu pengetahuan itu,,213,4,38.0,,4,30-39,Asia,valid1,充分利用这些知识的人,
 44078,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,15.0,4.15612006270975,,,hasil riset yang terbukti secara ilmiah,213,3,25.0,0.0,4,18-29,Asia,valid1,,科学证明的研究成果
 44083,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,7.0,5.086028056272659,-0.6123724356957946,Masyarakat  karena Menurut Anda siapa yang paling diuntungkan dari ilmu pengetahuan d,,213,4,30.0,0.0,4,30-39,Asia,valid1,社会因为你认为谁将从科学中受益最大,
-44090,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,5.8726955362822055,-0.1066003581778052,,Tidak ada komentar ,213,4,35.0,0.0,3,30-39,Asia,unsure,,没有意见
+44090,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,4.0,5.8726955362822055,-0.1066003581778052,,Tidak ada komentar ,213,4,35.0,0.0,3,30-39,Asia,invalid,,没有意见
 44091,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,5.0,3.741065608242129,,"yang paling diuntungkan dari ilmu prngetahuan adalah produsen perangkat, karena mereka bisa membuat dan menjaul perangkat kepada masyarakat",,213,3,40.0,1.0,3,40-49,Asia,valid1,从知识中受益最多的是设备制造商，因为他们可以制造并向公众销售设备,
 44095,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,10.0,3.389957354433135,0.25,,dia berkata sejujur jujurnya tentang apa yang dia lakukan,213,3,44.0,1.0,4,40-49,Asia,valid1,,他对自己所做的事尽可能诚实
 44108,IDN,Indonesia,VERIFY,0,1,,0,0,0,0,0,0,0,0,1,1,12.0,4.645022748012383,,Ilmuan sendiri dan orang sekitar,,213,2,30.0,0.0,3,30-39,Asia,valid1,科学家本人和他们周围的人,
@@ -1117,7 +1117,7 @@ tapi kalau ilmu sejarah hanya orang pembuat sejarah yang diuntungkan",,213,1,33.
 43703,IDN,Indonesia,MEDIUM,1,0,longstring_exceed,0,1,0,0,0,0,0,0,0,0,39.0,2.328385081721441,,,ada bukti dan dapat diterapkan dari hasil riset ilmuwan ,213,1,52.0,1.0,4,50-59,Asia,valid1,,有证据并且可以从科学研究结果中应用
 43750,IDN,Indonesia,MEDIUM,1,0,mahalanobis_outlier,0,0,1,0,0,0,0,0,0,0,2.0,10.498761890508543,0.660377358490566,si pembuat ilmu karena dialah yang mendapatkan manfaat terbesar dari ilmu yang dia temukan,,213,1,49.0,0.0,4,40-49,Asia,valid1,知识的创造者，因为他是从他发现的知识中获得最大利益的人,
 43794,IDN,Indonesia,MEDIUM,1,0,odd_even_low,0,0,0,1,0,0,0,0,0,0,4.0,4.188004544037841,-1.0,,dapat dipercaya karna ilmu dan hasil karya ciptaannya bisa kita pakai dalam kegiatan sehari hari dan bisa diterapkan dalam berbagai solusi di lingkungan,213,1,27.0,0.0,4,18-29,Asia,valid1,,值得信赖，因为我们可以在日常活动中使用他们的知识和创造，并可以应用于环境中的各种解决方案
-43796,IDN,Indonesia,MEDIUM,1,1,longstring_exceed,0,1,0,0,0,0,0,0,1,1,35.0,4.450696556795558,,semua manusia untuk hidup lebih baik,,213,3,44.0,1.0,3,40-49,Asia,unsure,所有人都生活得更好,
+43796,IDN,Indonesia,MEDIUM,1,1,longstring_exceed,0,1,0,0,0,0,0,0,1,1,35.0,4.450696556795558,,semua manusia untuk hidup lebih baik,,213,3,44.0,1.0,3,40-49,Asia,valid1,所有人都生活得更好,
 43809,IDN,Indonesia,MEDIUM,1,1,longstring_exceed,0,1,0,0,0,0,0,0,1,1,57.0,2.7139851431467594,,,hasil temuannya dapat dipertanggungjawabkan,213,3,31.0,0.0,4,30-39,Asia,valid1,,调查结果可以解释
 43834,IDN,Indonesia,MEDIUM,1,1,longstring_exceed,0,1,0,0,0,0,0,0,1,1,67.0,1.832144261754825,,,ok,213,4,30.0,1.0,3,30-39,Asia,invalid,,好的
 43836,IDN,Indonesia,MEDIUM,1,1,odd_even_low,0,0,0,1,0,0,0,0,1,1,17.0,3.3470743034231054,-1.0,Orang orang yang berkompeten,,213,3,40.0,0.0,4,40-49,Asia,valid1,有能力的人,

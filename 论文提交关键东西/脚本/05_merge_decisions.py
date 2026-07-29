@@ -48,7 +48,7 @@ def merge_decisions(flags: pd.DataFrame, queue: pd.DataFrame) -> pd.DataFrame:
 
 def verify_merge(merged: pd.DataFrame, queue: pd.DataFrame) -> None:
     """验证 queue 中的决策已正确合并。"""
-    q_dec = queue[queue["final_decision"].isin(["valid1", "valid2", "invalid", "unsure"])].copy()
+    q_dec = queue[queue["final_decision"].isin(["valid1", "valid2", "invalid"])].copy()
     check = q_dec.merge(merged[["row_id", "final_decision"]], on="row_id", suffixes=("_q", "_m"))
     mismatch = check[check["final_decision_q"] != check["final_decision_m"]]
     print(f"  合并验证: {'通过' if len(mismatch) == 0 else f'失败（错配 {len(mismatch)} 行）'}")
