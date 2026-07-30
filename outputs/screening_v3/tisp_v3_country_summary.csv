@@ -1,192 +1,194 @@
 ﻿COUNTRY_CODE,COUNTRY_NAME,final_decision,n,total,pct
-ALB,Albania,invalid,1,377,0.27
-ALB,Albania,normal,374,377,99.2
-ALB,Albania,valid1,2,377,0.53
-ARG,Argentina,invalid,3,509,0.59
-ARG,Argentina,normal,502,509,98.62
-ARG,Argentina,valid1,4,509,0.79
-AUS,Australia,invalid,73,3560,2.05
-AUS,Australia,normal,3408,3560,95.73
-AUS,Australia,valid1,77,3560,2.16
-AUS,Australia,valid2,2,3560,0.06
-AUT,Austria,invalid,6,1076,0.56
-AUT,Austria,normal,1058,1076,98.33
-AUT,Austria,valid1,12,1076,1.12
-BEL,Belgium,invalid,8,2052,0.39
-BEL,Belgium,normal,2027,2052,98.78
-BEL,Belgium,valid1,17,2052,0.83
-BGD,Bangladesh,normal,492,496,99.19
+ALB,Albania,invalid,11,377,2.92
+ALB,Albania,normal,365,377,96.82
+ALB,Albania,valid1,1,377,0.27
+ARG,Argentina,invalid,16,509,3.14
+ARG,Argentina,normal,490,509,96.27
+ARG,Argentina,valid1,3,509,0.59
+AUS,Australia,invalid,886,3560,24.89
+AUS,Australia,normal,2614,3560,73.43
+AUS,Australia,valid1,60,3560,1.69
+AUT,Austria,invalid,91,1076,8.46
+AUT,Austria,normal,978,1076,90.89
+AUT,Austria,valid1,7,1076,0.65
+BEL,Belgium,invalid,216,2052,10.53
+BEL,Belgium,normal,1824,2052,88.89
+BEL,Belgium,valid1,12,2052,0.58
+BGD,Bangladesh,invalid,43,496,8.67
+BGD,Bangladesh,normal,449,496,90.52
 BGD,Bangladesh,valid1,4,496,0.81
-BGR,Bulgaria,invalid,1,497,0.2
-BGR,Bulgaria,normal,496,497,99.8
-BOL,Bolivia,invalid,1,548,0.18
-BOL,Bolivia,normal,542,548,98.91
+BGR,Bulgaria,invalid,34,497,6.84
+BGR,Bulgaria,normal,463,497,93.16
+BOL,Bolivia,invalid,20,548,3.65
+BOL,Bolivia,normal,523,548,95.44
 BOL,Bolivia,valid1,5,548,0.91
-BRA,Brazil,invalid,3,1336,0.22
-BRA,Brazil,normal,1319,1336,98.73
-BRA,Brazil,valid1,14,1336,1.05
-BWA,Botswana,normal,505,508,99.41
+BRA,Brazil,invalid,59,1336,4.42
+BRA,Brazil,normal,1264,1336,94.61
+BRA,Brazil,valid1,13,1336,0.97
+BWA,Botswana,invalid,12,508,2.36
+BWA,Botswana,normal,493,508,97.05
 BWA,Botswana,valid1,3,508,0.59
-CAN,Canada,invalid,19,2535,0.75
-CAN,Canada,normal,2480,2535,97.83
-CAN,Canada,valid1,36,2535,1.42
-CHE,Switzerland,invalid,5,1018,0.49
-CHE,Switzerland,normal,1005,1018,98.72
-CHE,Switzerland,valid1,8,1018,0.79
-CHL,Chile,invalid,1,1058,0.09
-CHL,Chile,normal,1045,1058,98.77
-CHL,Chile,valid1,12,1058,1.13
-CHN,China,invalid,1,526,0.19
-CHN,China,normal,525,526,99.81
-CIV,Côte d'Ivoire,invalid,1,514,0.19
-CIV,Côte d'Ivoire,normal,509,514,99.03
+CAN,Canada,invalid,212,2535,8.36
+CAN,Canada,normal,2300,2535,90.73
+CAN,Canada,valid1,23,2535,0.91
+CHE,Switzerland,invalid,79,1018,7.76
+CHE,Switzerland,normal,932,1018,91.55
+CHE,Switzerland,valid1,7,1018,0.69
+CHL,Chile,invalid,41,1058,3.88
+CHL,Chile,normal,1006,1058,95.09
+CHL,Chile,valid1,11,1058,1.04
+CHN,China,invalid,148,526,28.14
+CHN,China,normal,378,526,71.86
+CIV,Côte d'Ivoire,invalid,5,514,0.97
+CIV,Côte d'Ivoire,normal,505,514,98.25
 CIV,Côte d'Ivoire,valid1,4,514,0.78
-CMR,Cameroon,invalid,2,505,0.4
-CMR,Cameroon,normal,500,505,99.01
-CMR,Cameroon,valid1,3,505,0.59
-COD,Congo DR,normal,403,408,98.77
+CMR,Cameroon,invalid,13,505,2.57
+CMR,Cameroon,normal,490,505,97.03
+CMR,Cameroon,valid1,2,505,0.4
+COD,Congo DR,invalid,13,408,3.19
+COD,Congo DR,normal,390,408,95.59
 COD,Congo DR,valid1,5,408,1.23
-COL,Colombia,invalid,2,514,0.39
-COL,Colombia,normal,505,514,98.25
-COL,Colombia,valid1,7,514,1.36
-CRI,Costa Rica,invalid,1,573,0.17
-CRI,Costa Rica,normal,565,573,98.6
+COL,Colombia,invalid,26,514,5.06
+COL,Colombia,normal,483,514,93.97
+COL,Colombia,valid1,5,514,0.97
+CRI,Costa Rica,invalid,28,573,4.89
+CRI,Costa Rica,normal,538,573,93.89
 CRI,Costa Rica,valid1,7,573,1.22
-CYP,Cyprus,invalid,1,509,0.2
-CYP,Cyprus,normal,508,509,99.8
-CZE,Czech Republic,invalid,1,502,0.2
-CZE,Czech Republic,normal,498,502,99.2
-CZE,Czech Republic,valid1,3,502,0.6
-DEU,Germany,invalid,59,8134,0.73
-DEU,Germany,normal,7950,8134,97.74
-DEU,Germany,valid1,123,8134,1.51
-DEU,Germany,valid2,2,8134,0.02
-DNK,Denmark,invalid,5,1227,0.41
-DNK,Denmark,normal,1215,1227,99.02
-DNK,Denmark,valid1,7,1227,0.57
-EGY,Egypt,normal,512,512,100.0
-ESP,Spain,invalid,7,1015,0.69
-ESP,Spain,normal,986,1015,97.14
-ESP,Spain,valid1,20,1015,1.97
-ESP,Spain,valid2,2,1015,0.2
-ETH,Ethiopia,normal,452,455,99.34
-ETH,Ethiopia,valid1,3,455,0.66
-FIN,Finland,invalid,4,1009,0.4
-FIN,Finland,normal,1000,1009,99.11
+CYP,Cyprus,invalid,30,509,5.89
+CYP,Cyprus,normal,479,509,94.11
+CZE,Czech Republic,invalid,67,502,13.35
+CZE,Czech Republic,normal,433,502,86.25
+CZE,Czech Republic,valid1,2,502,0.4
+DEU,Germany,invalid,858,8134,10.55
+DEU,Germany,normal,7191,8134,88.41
+DEU,Germany,valid1,85,8134,1.04
+DNK,Denmark,invalid,102,1227,8.31
+DNK,Denmark,normal,1122,1227,91.44
+DNK,Denmark,valid1,3,1227,0.24
+EGY,Egypt,invalid,54,512,10.55
+EGY,Egypt,normal,458,512,89.45
+ESP,Spain,invalid,105,1015,10.34
+ESP,Spain,normal,898,1015,88.47
+ESP,Spain,valid1,12,1015,1.18
+ETH,Ethiopia,invalid,15,455,3.3
+ETH,Ethiopia,normal,438,455,96.26
+ETH,Ethiopia,valid1,2,455,0.44
+FIN,Finland,invalid,112,1009,11.1
+FIN,Finland,normal,892,1009,88.4
 FIN,Finland,valid1,5,1009,0.5
-FRA,France,invalid,14,2029,0.69
-FRA,France,normal,1997,2029,98.42
-FRA,France,unsure,1,2029,0.05
-FRA,France,valid1,17,2029,0.84
-GBR,United Kingdom,invalid,16,2008,0.8
-GBR,United Kingdom,normal,1970,2008,98.11
-GBR,United Kingdom,valid1,22,2008,1.1
-GEO,Georgia,invalid,1,528,0.19
-GEO,Georgia,normal,522,528,98.86
-GEO,Georgia,valid1,5,528,0.95
-GHA,Ghana,normal,502,509,98.62
-GHA,Ghana,valid1,7,509,1.38
-GRC,Greece,invalid,1,1449,0.07
-GRC,Greece,normal,1447,1449,99.86
+FRA,France,invalid,190,2029,9.36
+FRA,France,normal,1827,2029,90.04
+FRA,France,valid1,12,2029,0.59
+GBR,United Kingdom,invalid,134,2008,6.67
+GBR,United Kingdom,normal,1858,2008,92.53
+GBR,United Kingdom,valid1,16,2008,0.8
+GEO,Georgia,invalid,80,528,15.15
+GEO,Georgia,normal,448,528,84.85
+GHA,Ghana,invalid,18,509,3.54
+GHA,Ghana,normal,485,509,95.28
+GHA,Ghana,valid1,6,509,1.18
+GRC,Greece,invalid,88,1449,6.07
+GRC,Greece,normal,1360,1449,93.86
 GRC,Greece,valid1,1,1449,0.07
-HKG,Hong Kong,invalid,7,599,1.17
-HKG,Hong Kong,normal,591,599,98.66
-HKG,Hong Kong,valid1,1,599,0.17
-HUN,Hungary,invalid,4,508,0.79
-HUN,Hungary,normal,494,508,97.24
-HUN,Hungary,valid1,10,508,1.97
-IDN,Indonesia,invalid,8,2104,0.38
-IDN,Indonesia,normal,1887,2104,89.69
-IDN,Indonesia,unsure,8,2104,0.38
-IDN,Indonesia,valid1,200,2104,9.51
-IDN,Indonesia,valid2,1,2104,0.05
-IND,India,invalid,6,502,1.2
-IND,India,normal,478,502,95.22
-IND,India,valid1,18,502,3.59
-IRL,Ireland,invalid,1,506,0.2
-IRL,Ireland,normal,495,506,97.83
-IRL,Ireland,valid1,10,506,1.98
-ISR,Israel,normal,1049,1049,100.0
-ITA,Italy,invalid,4,1520,0.26
-ITA,Italy,normal,1501,1520,98.75
-ITA,Italy,valid1,15,1520,0.99
-JPN,Japan,invalid,5,1004,0.5
-JPN,Japan,normal,997,1004,99.3
-JPN,Japan,valid1,2,1004,0.2
-KAZ,Kazakhstan,invalid,2,520,0.38
-KAZ,Kazakhstan,normal,518,520,99.62
-KEN,Kenya,normal,510,513,99.42
+HKG,Hong Kong,invalid,190,599,31.72
+HKG,Hong Kong,normal,409,599,68.28
+HUN,Hungary,invalid,31,508,6.1
+HUN,Hungary,normal,471,508,92.72
+HUN,Hungary,valid1,6,508,1.18
+IDN,Indonesia,invalid,221,2104,10.5
+IDN,Indonesia,normal,1742,2104,82.79
+IDN,Indonesia,valid1,141,2104,6.7
+IND,India,invalid,81,502,16.14
+IND,India,normal,416,502,82.87
+IND,India,valid1,5,502,1.0
+IRL,Ireland,invalid,37,506,7.31
+IRL,Ireland,normal,464,506,91.7
+IRL,Ireland,valid1,5,506,0.99
+ISR,Israel,invalid,60,1049,5.72
+ISR,Israel,normal,989,1049,94.28
+ITA,Italy,invalid,105,1520,6.91
+ITA,Italy,normal,1401,1520,92.17
+ITA,Italy,valid1,14,1520,0.92
+JPN,Japan,invalid,277,1004,27.59
+JPN,Japan,normal,727,1004,72.41
+KAZ,Kazakhstan,invalid,30,520,5.77
+KAZ,Kazakhstan,normal,490,520,94.23
+KEN,Kenya,invalid,20,513,3.9
+KEN,Kenya,normal,490,513,95.52
 KEN,Kenya,valid1,3,513,0.58
-KOR,South Korea,invalid,4,500,0.8
-KOR,South Korea,normal,495,500,99.0
-KOR,South Korea,valid1,1,500,0.2
-MAR,Morocco,invalid,1,503,0.2
-MAR,Morocco,normal,501,503,99.6
+KOR,South Korea,invalid,91,500,18.2
+KOR,South Korea,normal,409,500,81.8
+MAR,Morocco,invalid,25,503,4.97
+MAR,Morocco,normal,477,503,94.83
 MAR,Morocco,valid1,1,503,0.2
-MEX,Mexico,normal,528,532,99.25
-MEX,Mexico,valid1,4,532,0.75
-MYS,Malaysia,invalid,2,1046,0.19
-MYS,Malaysia,normal,1030,1046,98.47
+MEX,Mexico,invalid,15,532,2.82
+MEX,Mexico,normal,514,532,96.62
+MEX,Mexico,valid1,3,532,0.56
+MYS,Malaysia,invalid,69,1046,6.6
+MYS,Malaysia,normal,963,1046,92.07
 MYS,Malaysia,valid1,14,1046,1.34
-NGA,Nigeria,normal,1025,1040,98.56
-NGA,Nigeria,valid1,15,1040,1.44
-NIC,Nicaragua,normal,494,499,99.0
-NIC,Nicaragua,valid1,5,499,1.0
-NLD,Netherlands,invalid,7,1427,0.49
-NLD,Netherlands,normal,1403,1427,98.32
-NLD,Netherlands,valid1,17,1427,1.19
-NOR,Norway,invalid,5,513,0.97
-NOR,Norway,normal,506,513,98.64
+NGA,Nigeria,invalid,51,1040,4.9
+NGA,Nigeria,normal,976,1040,93.85
+NGA,Nigeria,valid1,13,1040,1.25
+NIC,Nicaragua,invalid,15,499,3.01
+NIC,Nicaragua,normal,480,499,96.19
+NIC,Nicaragua,valid1,4,499,0.8
+NLD,Netherlands,invalid,124,1427,8.69
+NLD,Netherlands,normal,1289,1427,90.33
+NLD,Netherlands,valid1,14,1427,0.98
+NOR,Norway,invalid,69,513,13.45
+NOR,Norway,normal,442,513,86.16
 NOR,Norway,valid1,2,513,0.39
-NZL,New Zealand,invalid,26,2028,1.28
-NZL,New Zealand,normal,1957,2028,96.5
-NZL,New Zealand,valid1,45,2028,2.22
-PER,Peru,normal,505,513,98.44
-PER,Peru,valid1,8,513,1.56
-PHL,Philippines,invalid,3,661,0.45
-PHL,Philippines,normal,645,661,97.58
-PHL,Philippines,valid1,12,661,1.82
-PHL,Philippines,valid2,1,661,0.15
-POL,Poland,invalid,16,3037,0.53
-POL,Poland,normal,2973,3037,97.89
-POL,Poland,valid1,48,3037,1.58
-PRT,Portugal,invalid,9,502,1.79
-PRT,Portugal,normal,416,502,82.87
+NZL,New Zealand,invalid,385,2028,18.98
+NZL,New Zealand,normal,1603,2028,79.04
+NZL,New Zealand,valid1,40,2028,1.97
+PER,Peru,invalid,10,513,1.95
+PER,Peru,normal,497,513,96.88
+PER,Peru,valid1,6,513,1.17
+PHL,Philippines,invalid,58,661,8.77
+PHL,Philippines,normal,597,661,90.32
+PHL,Philippines,valid1,6,661,0.91
+POL,Poland,invalid,269,3037,8.86
+POL,Poland,normal,2742,3037,90.29
+POL,Poland,valid1,26,3037,0.86
+PRT,Portugal,invalid,54,502,10.76
+PRT,Portugal,normal,388,502,77.29
 PRT,Portugal,valid1,1,502,0.2
-PRT,Portugal,valid2,76,502,15.14
-ROU,Romania,normal,439,444,98.87
+PRT,Portugal,valid2,59,502,11.75
+ROU,Romania,invalid,15,444,3.38
+ROU,Romania,normal,424,444,95.5
 ROU,Romania,valid1,5,444,1.13
-RUS,Russia,invalid,1,1518,0.07
-RUS,Russia,normal,1516,1518,99.87
+RUS,Russia,invalid,86,1518,5.67
+RUS,Russia,normal,1431,1518,94.27
 RUS,Russia,valid1,1,1518,0.07
-SRB,Serbia,invalid,1,575,0.17
-SRB,Serbia,normal,567,575,98.61
-SRB,Serbia,valid1,7,575,1.22
-SVK,Slovakia,invalid,1,543,0.18
-SVK,Slovakia,normal,533,543,98.16
-SVK,Slovakia,valid1,9,543,1.66
-SVN,Slovenia,invalid,6,528,1.14
-SVN,Slovenia,normal,517,528,97.92
-SVN,Slovenia,valid1,5,528,0.95
-SWE,Sweden,invalid,8,1013,0.79
-SWE,Sweden,normal,994,1013,98.12
-SWE,Sweden,valid1,11,1013,1.09
-TUR,Türkiye,invalid,2,508,0.39
-TUR,Türkiye,normal,492,508,96.85
-TUR,Türkiye,valid1,14,508,2.76
-TWN,Taiwan,invalid,3,1206,0.25
-TWN,Taiwan,normal,1201,1206,99.59
-TWN,Taiwan,valid1,2,1206,0.17
-UGA,Uganda,invalid,1,513,0.19
-UGA,Uganda,normal,507,513,98.83
-UGA,Uganda,valid1,5,513,0.97
-UKR,Ukraine,normal,1020,1020,100.0
-URY,Uruguay,normal,322,325,99.08
+SRB,Serbia,invalid,45,575,7.83
+SRB,Serbia,normal,526,575,91.48
+SRB,Serbia,valid1,4,575,0.7
+SVK,Slovakia,invalid,49,543,9.02
+SVK,Slovakia,normal,489,543,90.06
+SVK,Slovakia,valid1,5,543,0.92
+SVN,Slovenia,invalid,52,528,9.85
+SVN,Slovenia,normal,473,528,89.58
+SVN,Slovenia,valid1,3,528,0.57
+SWE,Sweden,invalid,101,1013,9.97
+SWE,Sweden,normal,903,1013,89.14
+SWE,Sweden,valid1,9,1013,0.89
+TUR,Türkiye,invalid,62,508,12.2
+TUR,Türkiye,normal,443,508,87.2
+TUR,Türkiye,valid1,3,508,0.59
+TWN,Taiwan,invalid,427,1206,35.41
+TWN,Taiwan,normal,779,1206,64.59
+UGA,Uganda,invalid,15,513,2.92
+UGA,Uganda,normal,494,513,96.3
+UGA,Uganda,valid1,4,513,0.78
+UKR,Ukraine,invalid,56,1020,5.49
+UKR,Ukraine,normal,964,1020,94.51
+URY,Uruguay,invalid,13,325,4.0
+URY,Uruguay,normal,309,325,95.08
 URY,Uruguay,valid1,3,325,0.92
-USA,United States,invalid,67,2580,2.6
-USA,United States,normal,2434,2580,94.34
-USA,United States,valid1,78,2580,3.02
-USA,United States,valid2,1,2580,0.04
-ZAF,South Africa,invalid,1,1027,0.1
-ZAF,South Africa,normal,1011,1027,98.44
-ZAF,South Africa,valid1,15,1027,1.46
+USA,United States,invalid,450,2580,17.44
+USA,United States,normal,2086,2580,80.85
+USA,United States,valid1,44,2580,1.71
+ZAF,South Africa,invalid,78,1027,7.59
+ZAF,South Africa,normal,939,1027,91.43
+ZAF,South Africa,valid1,10,1027,0.97

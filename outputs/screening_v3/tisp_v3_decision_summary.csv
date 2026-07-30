@@ -1,6 +1,5 @@
 ﻿final_decision,n,pct
-normal,70370,97.84
-valid1,1020,1.42
-invalid,438,0.61
-valid2,85,0.12
-unsure,9,0.01
+normal,63610,88.44
+invalid,7542,10.49
+valid1,711,0.99
+valid2,59,0.08

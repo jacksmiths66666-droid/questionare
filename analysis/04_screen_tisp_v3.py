@@ -135,13 +135,18 @@ def _shannon_entropy(s: str) -> float:
 
 
 def is_gibberish(text: pd.Series, entropy_threshold: float | None = None) -> tuple[pd.Series, float]:
-    """判定开放题是否为纯乱码（通用统计法）。
+    """判定开放题是否为纯乱码（修正版，2024-07）。
+
+    修正了旧版三个误报来源：
+      ① 熵检测：短文本(<20字符)自然低熵被误杀 → 增加长度加权 adjusted_entropy = entropy/log2(n)
+      ② 编码乱码：非拉丁文字(西里尔/希腊/CJK)被判乱码 → 仅识别真正编码错误(U+FFFD/控制字符/孤立代理)
+      ③ 符号占比：门槛过低(0.5) → 提高到0.7
 
     4 个通用指标，任一达标即标记乱码：
-      E: 字符熵 < 5% 分位数（数据驱动）→ 重复性乱码
-      S: 符号占比 > 0.5 且长度≥3 → 纯符号乱码
+      E: adjusted_entropy < 0.3 且 原始熵 < 2.0 → 重复性乱码（如 "aaaaa"、"....."）
+      S: 符号占比 > 0.7 且长度≥5 → 纯符号乱码
       D: 数字占比 > 0.8 且长度≥5 → 纯数字乱码
-      M: 含 Unicode 替换字符(\ufffd) 或高位字符占比 > 0.3 → 编码乱码
+      M: 含 Unicode 替换字符(\ufffd) 或控制字符占比 > 0.3 → 真正的编码乱码
 
     返回：(is_gibberish_mask, entropy_threshold)
     """
@@ -150,48 +155,69 @@ def is_gibberish(text: pd.Series, entropy_threshold: float | None = None) -> tup
     no_spaces = trimmed.str.replace(r"\s", "", regex=True)
     n = no_spaces.str.len()
 
-    # 指标 E: 字符熵（仅长度≥5 的文本）
-    long_text = n >= 5
-    entropy = pd.Series(np.nan, index=text.index)
-    entropy[long_text] = no_spaces[long_text].apply(_shannon_entropy)
-    valid_entropy = entropy[~entropy.isna()]
+    # 指标 E: 长度加权熵
+    # 对于短文本，最大可能熵为 log2(n)，所以 adjusted_entropy = raw_entropy / log2(n)
+    # 纯随机短文本 adjusted ≈ 1.0，重复字符 → 接近 0
+    long_enough = n >= 5
+    raw_entropy = pd.Series(np.nan, index=text.index)
+    raw_entropy[long_enough] = no_spaces[long_enough].apply(_shannon_entropy)
+    log_n = pd.Series(np.nan, index=text.index)
+    log_n[long_enough] = no_spaces[long_enough].apply(lambda x: math.log2(len(x)) if len(x) > 0 else 0)
+    adj_entropy = pd.Series(np.nan, index=text.index)
+    adj_entropy[long_enough] = raw_entropy[long_enough] / log_n[long_enough]
+
+    # 真正的乱码：adjusted_entropy < 0.3（字符使用极度单一）
+    # 同时要求原始熵值极低（排除多语言短文本的误报）
+    is_very_low_entropy = adj_entropy.notna() & (adj_entropy < 0.3) & (raw_entropy < 2.0)
+
+    # 纯重复字符（同一个字符重复15次以上，如 "wwwwwwwwwwwwwwww"）
+    def is_repetitive(s: str) -> bool:
+        if len(s) < 15:
+            return False
+        return len(set(s.lower())) <= 2
+    rE_new = no_spaces.apply(is_repetitive) | is_very_low_entropy
 
     if entropy_threshold is None:
-        if len(valid_entropy) > 0:
-            entropy_threshold = float(np.quantile(valid_entropy, 0.05))
-        else:
-            entropy_threshold = -1.0
-    rE = entropy.notna() & (entropy <= entropy_threshold)
+        # 保持兼容：返回 adjusted_entropy 的 5% 分位数
+        valid_adj = adj_entropy[~adj_entropy.isna()]
+        entropy_threshold = float(np.quantile(valid_adj, 0.05)) if len(valid_adj) > 0 else -1.0
 
-    # 指标 S: 符号占比（长度≥3）
+    # 指标 S: 符号占比（门槛提高到0.7，长度≥5）
     def symbol_ratio(s: str) -> float:
         if not s:
             return 0.0
-        sym_count = sum(1 for c in s if not c.isalnum())
-        return sym_count / len(s)
+        sym_count = sum(1 for c in s if not c.isalnum() and not c.isspace())
+        return sym_count / max(len(s), 1)
     sym_ratio = no_spaces.apply(symbol_ratio)
-    rS = (sym_ratio > 0.5) & (n >= 3)
+    rS = (sym_ratio > 0.7) & (n >= 5)
 
     # 指标 D: 数字占比（长度≥5）
     def digit_ratio(s: str) -> float:
         if not s:
             return 0.0
         dig_count = sum(1 for c in s if c.isdigit())
-        return dig_count / len(s)
+        return dig_count / max(len(s), 1)
     dig_ratio = no_spaces.apply(digit_ratio)
     rD = (dig_ratio > 0.8) & (n >= 5)
 
-    # 指标 M: 编码乱码
+    # 指标 M: 真正的编码乱码（修正：不再把高位字符当乱码）
     def has_encoding_garble(s: str) -> bool:
         if not s:
             return False
         if '\ufffd' in s:
+            return True  # U+FFFD = 真正的编码错误
+        # 检查控制字符（不可打印字符）
+        control_count = sum(1 for c in s if ord(c) < 0x20 and c not in '\n\r\t')
+        if control_count >= len(s) * 0.3:
             return True
-        high_count = sum(1 for c in s if ord(c) > 0x00FF and c.isalpha())
-        return high_count >= 3 and high_count / len(s) > 0.3
+        # 检查孤立代理（surrogates）
+        bad_chars = sum(1 for c in s if 0xDC00 <= ord(c) <= 0xDFFF)
+        if bad_chars > 0:
+            return True
+        return False
     rM = no_spaces.apply(has_encoding_garble)
 
-    is_gib = (rE | rS | rD | rM) & (~empty)
+    is_gib = (rE_new | rS | rD | rM) & (~empty)
     return pd.Series(is_gib, index=text.index), entropy_threshold
 
 
@@ -618,7 +644,7 @@ def run_screening(input_path: Path = DEFAULT_INPUT, output_dir: Path = DEFAULT_O
         },
             "one_vote_veto": {
                 "all_missing": "all closed-end items empty",
-                "gibberish": "entropy<5pct | symbol_ratio>0.5 | digit_ratio>0.8 | encoding_garble",
+                "gibberish": "adj_entropy<0.3&raw<2.0 | repetitive | symbol_ratio>0.7 | digit_ratio>0.8 | encoding_garble(U+FFFD|control|surrogate)",
                 "gibberish_entropy_threshold": float(flags["entropy_threshold"].iloc[0]) if "entropy_threshold" in flags.columns else None,
             },
         },
