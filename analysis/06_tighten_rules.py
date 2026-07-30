@@ -1,7 +1,7 @@
-"""第六步：两规则收紧 — 基于 flags + queue 直接构建最终数据集
+"""第六步：规则 B 收紧 — 基于 flags + queue 直接构建最终数据集
 
-规则 A: BENEFIT_OPEN + TRUST_OPEN 合计字符数 ≤ 5 → invalid
-规则 B: ls_max_run ≥ 17 → invalid
+规则 B: ls_max_run ≥ 13 → invalid（仅作用于未人工复核的行）
+已复核行保留人审结论，不覆盖。
 
 输入: tisp_v3_flags.csv + tisp_v3_review_queue.csv
 输出: tisp_v3_analysis_ready.csv（最终分析就绪数据集，71,922 行）
@@ -64,17 +64,9 @@ def is_gibberish_text(s: str) -> bool:
     return low_entropy or repetitive or high_symbol or high_digit or has_ufffd or (control_ratio > 0.3) or has_surrogate
 
 
-def both_len(r: pd.Series) -> int:
-    b = str(r["BENEFIT_OPEN"]).strip()
-    t = str(r["TRUST_OPEN"]).strip()
-    bl = 0 if not b or b.lower() in ("nan", "na", "-99", "none", "") else len(b)
-    tl = 0 if not t or t.lower() in ("nan", "na", "-99", "none", "") else len(t)
-    return bl + tl
-
-
 def main():
     print("=" * 50)
-    print("第六步：两规则收紧")
+    print("第六步：规则 B 收紧")
     print("=" * 50)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -101,30 +93,25 @@ def main():
     n_gib = combined_gib.sum()
     print(f"  真乱码 (gibberish): {n_gib} 行")
 
-    # Step 3: 两规则计算
-    merged["both_len"] = merged.apply(both_len, axis=1)
-    rule_A = merged["both_len"] <= 5
-    rule_B = merged["ls_max_run"].astype(float) >= 17
-    rule_any = rule_A | rule_B
+    # Step 3: 标记已人工复核的行（内部逻辑，不写入交付件）
+    in_queue = merged["row_id"].isin(q_ids)
+    already_reviewed = in_queue
 
-    # Step 4: 记录规则命中前的已有 invalid（队列 + gibberish）
+    # Step 4: 规则 B 计算
+    rule_B = merged["ls_max_run"].astype(float) >= 13
+
+    # Step 5: 记录规则命中前的已有 invalid（队列 + gibberish）
     existing_invalid = set(merged[merged["final_decision"] == "invalid"]["row_id"])
 
-    # Step 5: 规则命中 → 标记 invalid
+    # Step 6: 规则 B 仅对未审行标记 invalid，已审行保留人审结论
+    rule_any = rule_B & ~already_reviewed
     merged.loc[rule_any, "final_decision"] = "invalid"
 
-    # Step 6: 标记来源
+    # Step 7: 标记来源（仅 existing + rule_B_only）
     merged["invalid_source"] = "none"
-    a_only = set(merged[rule_A & ~rule_B]["row_id"]) - existing_invalid
-    b_only = set(merged[rule_B & ~rule_A]["row_id"]) - existing_invalid
-    ab_both = set(merged[rule_A & rule_B]["row_id"]) - existing_invalid
-
-    for rid in a_only:
-        merged.loc[merged["row_id"] == rid, "invalid_source"] = "rule_A_only"
-    for rid in b_only:
+    b_new = set(merged[rule_any]["row_id"]) - existing_invalid
+    for rid in b_new:
         merged.loc[merged["row_id"] == rid, "invalid_source"] = "rule_B_only"
-    for rid in ab_both:
-        merged.loc[merged["row_id"] == rid, "invalid_source"] = "rule_A+B"
     for rid in existing_invalid:
         merged.loc[merged["row_id"] == rid, "invalid_source"] = "existing"
 
@@ -133,8 +120,8 @@ def main():
         if c.endswith("_q") or c.endswith("_from_ready"):
             merged.drop(columns=[c], inplace=True, errors="ignore")
 
-    # 列重排：row_id + final_decision + invalid_source + both_len 在前
-    first_cols = ["row_id", "final_decision", "invalid_source", "both_len"]
+    # 列重排：row_id + final_decision + invalid_source 在前
+    first_cols = ["row_id", "final_decision", "invalid_source"]
     first_cols = [c for c in first_cols if c in merged.columns]
     rest = [c for c in merged.columns if c not in first_cols]
     merged = merged[first_cols + rest]
@@ -147,7 +134,7 @@ def main():
     # 输出：复核队列（原人工复核的 1,552 条，含最终决策标注）
     review = merged[merged["row_id"].isin(q_ids)].copy()
     qcols = ["row_id", "COUNTRY_CODE", "COUNTRY_NAME", "final_decision", "invalid_source",
-             "both_len", "screening_tier", "trigger_reason",
+             "screening_tier", "trigger_reason",
              "signal_count", "signal_attention", "signal_longstring",
              "signal_mahalanobis", "signal_odd_even",
              "ls_max_run", "md_score", "oe_r",
@@ -160,10 +147,10 @@ def main():
     print(f"  -> tisp_v3_review_annotated.csv ({len(review)} rows, 复核队列含最终决策)")
 
     # 输出：规则收紧捕获清单（供第二轮复核参考）
-    new_inv = merged[merged["invalid_source"].isin(["rule_A_only", "rule_B_only", "rule_A+B"])].copy()
+    new_inv = merged[merged["invalid_source"] == "rule_B_only"].copy()
     new_inv = new_inv[qcols].sort_values(["invalid_source", "row_id"])
     new_inv.to_csv(OUTPUT_DIR / "tisp_v3_tighten_captures.csv", index=False, encoding="utf-8-sig")
-    print(f"  -> tisp_v3_tighten_captures.csv ({len(new_inv)} rows, 两规则新增)")
+    print(f"  -> tisp_v3_tighten_captures.csv ({len(new_inv)} rows, Rule B 新增)")
 
     # 输出：决策分布概况
     vc = merged["final_decision"].value_counts().reset_index()
@@ -195,7 +182,7 @@ def main():
     src = merged[merged["final_decision"] == "invalid"]["invalid_source"].value_counts()
     valid = len(merged) - vc_d.get("invalid", 0)
     pct = valid / len(merged) * 100
-    status = "达标" if 80 <= pct <= 90 else "略高" if pct > 90 else "偏低"
+    status = "达标" if 70 <= pct <= 80 else "偏高" if pct > 80 else "偏低"
 
     print(f"\n  final_decision:")
     for v in ["normal", "valid1", "valid2", "invalid"]:
