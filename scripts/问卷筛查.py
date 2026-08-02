@@ -395,10 +395,12 @@ class Step2DKNA:
 # ============================================================================
 #  模块 8: step3_aux —— 辅助矛盾指标
 # ============================================================================
+#  模块 8: step3_aux —— 辅助矛盾指标
+# ============================================================================
 class Step3Auxiliary:
-    """8 个辅助指标，仅标记不删除。
+    """5 个辅助指标，仅标记不删除。
 
-    建议：同一人被 >= 3 个辅助指标同时命中 -> 人工复核是否降级。
+    建议：同一人被 >= 2 个辅助指标同时命中 -> 人工复核是否降级。
     """
 
     @staticmethod
@@ -407,36 +409,12 @@ class Step3Auxiliary:
         print("辅助指标（仅供参考，不直接剔除）")
         print("=" * 40)
 
-        # [1] P11E > P11D：女权认属矛盾
-        mask = ~np.isnan(p11_mat[:, 3:5]).any(axis=1)
-        df["aux_p11_contra"] = ((p11_mat[:, 4] > p11_mat[:, 3]) & mask).astype(int)
-        print(f"  [1] P11E>P11D: {df['aux_p11_contra'].sum()} 人")
-
-        # [2] IRV = 0：P11 五题完全没波动
-        irv = np.nanstd(p11_mat, axis=1)
-        df["aux_irv_zero"] = ((irv == 0) & ~np.isnan(p11_mat).any(axis=1)).astype(int)
-        print(f"  [2] IRV=0: {df['aux_irv_zero'].sum()} 人")
-
-        # [3] P08=非常必要 + P09=负面感受
+        # ---- [1] P08=非常必要 + P09=负面感受 ----
         cond = (df["P08"] == "Very necessary") & (df["P09"] == "Rather negative")
         df["aux_p8p9"] = cond.astype(int)
-        print(f"  [3] P08+P09 矛盾: {cond.sum()} 人")
+        print(f"  [1] P08=非常必要+P09=负面感受: {cond.sum()} 人")
 
-        # [4] 高兴趣 + 多 DK
-        cond = (df["P01"].isin(["Very", "Quite"])) & (df["dkna_count"] >= 5)
-        df["aux_p1_dk"] = cond.astype(int)
-        print(f"  [4] 高兴趣+DK>=5: {cond.sum()} 人")
-
-        # [5] P02 五渠道全一样
-        p02 = df[["P02A","P02B","P02C","P02D","P02E"]].map(
-            lambda x: enc.FREQ_5.get(x, np.nan)
-        )
-        df["aux_p2_same"] = (
-            p02.notna().all(axis=1) & (p02.nunique(axis=1) == 1)
-        ).astype(int)
-        print(f"  [5] P02 五渠道全一样: {df['aux_p2_same'].sum()} 人")
-
-        # [6] 参加过抗议但忘了主题
+        # ---- [2] 参加过抗议但忘了主题 ----
         cond = (
             df["P16"].isin(["Yes, in two or more", "Yes, once"])
             & (
@@ -446,22 +424,33 @@ class Step3Auxiliary:
             )
         )
         df["aux_protest_forget"] = cond.astype(int)
-        print(f"  [6] 抗议忘主题: {cond.sum()} 人")
+        print(f"  [2] 参加过抗议但忘了主题: {cond.sum()} 人")
 
-        # [7] 大学毕业 + 完全无法捍卫意见
-        cond = (
-            df["P25"].str.contains("University", na=False)
-            & (df["P10B"] == "No capable")
+        # ---- [3] P01=Very + P02 五渠道全都 <=2 ----
+        p02_df = df[["P02A","P02B","P02C","P02D","P02E"]].map(
+            lambda x: enc.FREQ_5.get(x, np.nan)
         )
-        df["aux_uni_nocap"] = cond.astype(int)
-        print(f"  [7] 大学+无能力: {cond.sum()} 人")
-
-        # [8] Very + P02 全 <= 2
-        p02_max = p02.max(axis=1)
+        p02_max = p02_df.max(axis=1)
         cond = (df["P01"] == "Very") & (p02_max <= 2)
         df["aux_very_p2low"] = cond.astype(int)
-        print(f"  [8] Very+P02全<=2: {cond.sum()} 人")
+        print(f"  [3] Very+P02全<=2 (高兴趣却从不接触): {cond.sum()} 人")
 
+        # ---- [4]~[5] 文本质量分析（开放题） ----
+        from text_quality import TextConfig as TQCfg, QualityAnalyzer as TQA
+        tcfg = TQCfg()
+        tqa  = TQA(tcfg)
+        tflags = tqa.check_all(df)
+        df = pd.concat([df, tflags], axis=1)
+
+        for col, desc in tcfg.TEXT_FIELDS:
+            low_q = (df[f"{col}_code"] | df[f"{col}_dkna"] | df[f"{col}_short"]).sum()
+            print(f"  [{col}] {desc}: 低质量={low_q} 人")
+
+        df["aux_text_low3"] = (df["text_low_quality_count"] >= 3).astype(int)
+        print(f"  [4] 4道文本题中>=3道低质量: {df['aux_text_low3'].sum()} 人")
+
+        df["aux_text_low4"] = (df["text_low_quality_count"] >= 4).astype(int)
+        print(f"  [5] 4道文本题全部低质量: {df['aux_text_low4'].sum()} 人")
 # ============================================================================
 #  模块 9: reporter —— 综合标记 & 输出
 # ============================================================================
