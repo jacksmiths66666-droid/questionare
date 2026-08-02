@@ -1,0 +1,11 @@
+row_id,COUNTRY_CODE,signal,BENEFIT_OPEN,TRUST_OPEN,decision,reason
+5344,BGR,MD,има,,invalid,B:泛词
+18997,ITA,OE,--,,invalid,B:重复单字符
+32602,DEU,OE,,...,invalid,T:重复单字符
+33867,NLD,OE,nvt,,invalid,B:无元音乱敲
+35809,AUT,MD,ne,,invalid,B:泛词
+36746,FRA,MD,Vjkkk,,invalid,B:短无元音
+39695,GBR,OE,0,,invalid,B:单字符
+41221,GEO,MD,Gffhh,,invalid,B:短无元音
+56497,PHL,MD,,100%,invalid,T:纯非字母
+62764,SWE,OE,Sjxb,,invalid,B:短无元音

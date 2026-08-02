@@ -1,0 +1,60 @@
+import pandas as pd
+
+flags = pd.read_csv("outputs/screening_v3/tisp_v3_flags.csv", low_memory=False)
+ready = pd.read_csv("outputs/screening_v3/tisp_v3_analysis_ready.csv", low_memory=False)
+
+# ── 1. The veto problem ──
+veto = flags[flags["veto_any"] == 1]
+veto_signal = veto[veto["trigger_reason"].notna() & (veto["trigger_reason"] != "")]
+veto_no_signal = veto[veto["trigger_reason"].isna() | (veto["trigger_reason"] == "")]
+
+print("=" * 70)
+print("状态：第三轮审查前")
+print("=" * 70)
+print(f"\n原始数据总量:                71,922")
+print()
+print("── 第一轮：自动化筛查 ──")
+print(f"  未触发信号 → NORMAL:       69,936")
+print(f"  触发信号 → 待复核:          1,552")
+print(f"    MEDIUM(1信号):  1,718")
+print(f"    HIGH(≥2信号):      9")
+print(f"    VERIFY(注意力降级): 302")
+print(f"  └ 部分被一票否决拦截未入队: 保留在flags中")
+print(f"  一票否决(veto_gibberish):  13,816")
+print()
+print("── 第二轮：人工复核 (1,552条) ──")
+print(f"  valid1 (基础有效):  1,025")
+print(f"  valid2 (严格有效):     85")
+print(f"  invalid (无效):       442")
+print()
+print("── 最终数据集 ──")
+print(f"  分析就绪集:             71,480")
+print(f"    normal:  70,370")
+print(f"    valid1:   1,025")
+print(f"    valid2:      85")
+print(f"  标记无效:                442")
+print()
+
+# ── 2. Key issue: veto + signal rows ──
+print("=" * 70)
+print("待解决问题")
+print("=" * 70)
+print()
+print("【问题A】一票否决中的[漏网信号]")
+print(f"  13,816 条被 veto，但已全部归入 normal")
+print(f"  其中 {len(veto_signal)} 条实际上触发了质量信号但从未复核：")
+for reason, cnt in veto_signal["trigger_reason"].value_counts().items():
+    print(f"    {reason}: {cnt}")
+print(f"  其余 {len(veto_no_signal)} 条无信号，熵误报但数据本身正常")
+print()
+print("【问题B】人工复核无效中的潜在假阳性")
+print(f"  442 条被判 invalid")
+print(f"  已标记 11 条候选，初审发现 3 条应改判")
+print(f"  剩余 431 条也可能存在误判")
+print()
+print("【问题C】一票否决本身的检测逻辑")
+print(f"  熵阈值 2.75 对以下情况过于激进：")
+print(f"    ① 短文本（<15字符天然低熵）")
+print(f"    ② 非拉丁字母（西里尔、希腊、CJK等）")
+print(f"    ③ 单个实义词（Faktet、njerezimi等）")
+print(f"  误报率估算：>99%")

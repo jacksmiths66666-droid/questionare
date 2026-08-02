@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,7 +25,7 @@ from numpy.linalg import LinAlgError
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = PROJECT_DIR / "D081_TISP" / "dataset.csv"
+DEFAULT_INPUT = Path(r"D:\开山\收集数据\081\D081_TISP\dataset.csv")
 DEFAULT_OUTPUT_DIR = PROJECT_DIR / "outputs" / "screening_v3"
 SPECIAL_MISSING = frozenset({"", "NA", "N/A", "-98", "-99"})
 
@@ -302,12 +303,12 @@ def longest_run_length(values: np.ndarray) -> int:
 def compute_longstring_signals(numeric: pd.DataFrame) -> pd.DataFrame:
     """计算全局 Longstring 信号。
 
-    阈值：数据驱动 — 99 分位数。
+    阈值：固定值 13（连续 13 题以上选同一选项视为异常）。
     """
     array = numeric[GLOBAL_LS_ITEMS].to_numpy(dtype=float)
     runs = np.array([longest_run_length(row) for row in array], dtype=float)
 
-    threshold = float(np.quantile(runs, 0.99))
+    threshold = 13.0
 
     result = pd.DataFrame(index=numeric.index)
     result["ls_max_run"] = runs
@@ -623,8 +624,8 @@ def run_screening(input_path: Path = DEFAULT_INPUT, output_dir: Path = DEFAULT_O
             },
             "global_longstring": {
                 "n_items": len(GLOBAL_LS_ITEMS),
-                "threshold_method": "0.99 quantile (data-driven)",
-                "threshold_value": float(flags["ls_threshold"].iloc[0]),
+                "threshold_method": "fixed value 13",
+                "threshold_value": 13.0,
             },
             "odd_even": {
                 "scale": "TRUST_SCI",

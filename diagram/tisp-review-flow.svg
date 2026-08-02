@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 1240">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', sans-serif; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-rose" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="1240" fill="#0f172a"/>
+  <rect width="880" height="1240" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="30" y="34" fill="white" font-size="16" font-weight="700">TISP 数据集有效性审核流程（最终版）</text>
+  <text x="30" y="52" fill="#94a3b8" font-size="9">D081_TISP · 审核规则 v3（ls 阈值=13 · 信号≥2 需两链验证）</text>
+
+  <!-- ===== 阶段 1: 原始数据 ===== -->
+  <rect x="30" y="78" width="820" height="90" rx="12" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="44" y="96" fill="#fbbf24" font-size="9" font-weight="600">阶段 1 · 原始数据</text>
+
+  <!-- 输入：原样本 -->
+  <rect x="290" y="108" width="300" height="44" rx="25" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="440" y="126" fill="white" font-size="11" font-weight="600" text-anchor="middle">原始数据集 dataset.csv</text>
+  <text x="440" y="142" fill="#94a3b8" font-size="9" text-anchor="middle">n = 71,922 行 × 126 列</text>
+
+  <!-- 箭头 -->
+  <line x1="440" y1="152" x2="440" y2="200" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <!-- ===== 阶段 2: 信号计算 ===== -->
+  <rect x="30" y="212" width="820" height="250" rx="12" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="44" y="230" fill="#22d3ee" font-size="9" font-weight="600">阶段 2 · 信号筛选（自动，无内容判断）</text>
+
+  <!-- 信号规则 -->
+  <rect x="100" y="244" width="680" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="440" y="266" fill="white" font-size="10" font-weight="600" text-anchor="middle">三类信号</text>
+  <text x="440" y="282" fill="#94a3b8" font-size="8.5" text-anchor="middle">A. 最长答案连续相同字符 ≥ 13（longstring_exceed）</text>
+  <text x="440" y="295" fill="#94a3b8" font-size="8.5" text-anchor="middle">B. 奇偶分布过低（odd_even_low）· C. Mahalanobis 异常值（mahalanobis_outlier）</text>
+
+  <!-- 计数 -->
+  <line x1="440" y1="314" x2="440" y2="336" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="290" y="344" width="300" height="40" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="440" y="361" fill="white" font-size="10" text-anchor="middle">信号计数</text>
+  <text x="440" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">signal_count = 0 / 1 / 2+</text>
+
+  <!-- 分支箭头 -->
+  <line x1="440" y1="384" x2="440" y2="424" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="450" y="408" fill="white" font-size="8">signal = 0</text>
+
+  <!-- 非队列 -->
+  <rect x="290" y="432" width="300" height="40" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="440" y="450" fill="white" font-size="10" text-anchor="middle">无信号（NORMAL）</text>
+  <text x="440" y="464" fill="#94a3b8" font-size="8.5" text-anchor="middle">n = 54,913</text>
+
+  <!-- 分支到 HIGH / MEDIUM -->
+  <line x1="440" y1="504" x2="440" y2="530" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="450" y="520" fill="white" font-size="8">signal = 1</text>
+  <line x1="440" y1="530" x2="260" y2="530" stroke="#64748b"/>
+  <line x1="260" y1="530" x2="260" y2="556" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="200" y="544" fill="white" font-size="8">signal ≥ 2</text>
+  <line x1="440" y1="530" x2="620" y2="530" stroke="#64748b"/>
+  <line x1="620" y1="530" x2="620" y2="556" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <!-- ===== 阶段 3: 分层队列 ===== -->
+  <rect x="30" y="594" width="820" height="250" rx="12" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="44" y="612" fill="#a78bfa" font-size="9" font-weight="600">阶段 3 · 分层人工/自动审核（n = 17,009）</text>
+
+  <!-- HIGH -->
+  <rect x="110" y="628" width="200" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="210" y="650" fill="white" font-size="11" font-weight="600" text-anchor="middle">HIGH 高危</text>
+  <text x="210" y="666" fill="#94a3b8" font-size="8.5" text-anchor="middle">n = 160 · 信号 ≥ 2</text>
+  <text x="210" y="680" fill="#94a3b8" font-size="8.5" text-anchor="middle">两链验证（benefit/trust）</text>
+
+  <!-- VERIFY -->
+  <rect x="340" y="628" width="200" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="440" y="650" fill="white" font-size="11" font-weight="600" text-anchor="middle">VERIFY 复核</text>
+  <text x="440" y="666" fill="#94a3b8" font-size="8.5" text-anchor="middle">n = 176 · IDN/PRT 语言</text>
+  <text x="440" y="680" fill="#94a3b8" font-size="8.5" text-anchor="middle">内容判断（真实语言作答）</text>
+
+  <!-- MEDIUM -->
+  <rect x="570" y="628" width="200" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="670" y="650" fill="white" font-size="11" font-weight="600" text-anchor="middle">MEDIUM 中危</text>
+  <text x="670" y="666" fill="#94a3b8" font-size="8.5" text-anchor="middle">n = 16,673 · 信号 = 1</text>
+  <text x="670" y="680" fill="#94a3b8" font-size="8.5" text-anchor="middle">长字符串→无效·非长串→内容审核</text>
+
+  <!-- 审核结果 -->
+  <line x1="210" y1="698" x2="210" y2="730" stroke="#64748b" marker-end="url(#arrow)"/>
+  <line x1="440" y1="698" x2="440" y2="730" stroke="#64748b" marker-end="url(#arrow)"/>
+  <line x1="670" y1="698" x2="670" y2="730" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="738" width="200" height="40" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="210" y="754" fill="white" font-size="10" font-weight="600" text-anchor="middle">134 valid / 26 invalid</text>
+  <text x="210" y="769" fill="#94a3b8" font-size="8.5" text-anchor="middle">valid 率 83.8%</text>
+
+  <rect x="340" y="738" width="200" height="40" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="440" y="754" fill="white" font-size="10" font-weight="600" text-anchor="middle">169 valid / 7 invalid</text>
+  <text x="440" y="769" fill="#94a3b8" font-size="8.5" text-anchor="middle">valid 率 96.0%</text>
+
+  <rect x="570" y="738" width="200" height="40" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="670" y="754" fill="white" font-size="10" font-weight="600" text-anchor="middle">729 valid / 15,944 invalid</text>
+  <text x="670" y="769" fill="#94a3b8" font-size="8.5" text-anchor="middle">valid 率 4.4%（15,856 长字符串全无效）</text>
+
+  <!-- ===== 阶段 4: 汇总 ===== -->
+  <rect x="30" y="870" width="820" height="90" rx="12" fill="none" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="44" y="888" fill="#34d399" font-size="9" font-weight="600">阶段 4 · 汇总</text>
+
+  <line x1="210" y1="778" x2="210" y2="900" stroke="#64748b"/>
+  <line x1="440" y1="778" x2="440" y2="900" stroke="#64748b"/>
+  <line x1="670" y1="778" x2="670" y2="900" stroke="#64748b"/>
+  <line x1="210" y1="900" x2="440" y2="900" stroke="#64748b"/>
+  <line x1="440" y1="900" x2="670" y2="900" stroke="#64748b"/>
+
+  <rect x="290" y="912" width="300" height="60" rx="25" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="440" y="934" fill="white" font-size="11" font-weight="600" text-anchor="middle">最终数据集</text>
+  <text x="440" y="950" fill="#94a3b8" font-size="9" text-anchor="middle">valid 55,868 (77.68%) · invalid 16,054 (22.32%)</text>
+
+  <!-- 备注 -->
+  <text x="30" y="1000" fill="#94a3b8" font-size="8.5">备注：无信号行直接判 valid（54,836 valid / 77 invalid）；非 MEDIUM 队列行 valid 率 &gt; 83%；MEDIUM 长字符串行（ls≥13，n=15,856）</text>
+  <text x="30" y="1015" fill="#94a3b8" font-size="8.5">判定为无效（规则 B：straightlining，不进行内容审核）；MEDIUM 非长串（817 行：OE 511 / MD 303 / AT 3）经内容审核 729 valid + 88 invalid。</text>
+</svg>
