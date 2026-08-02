@@ -1,0 +1,119 @@
+ID=1506 优先级=高 信号=DKNA+DUR低 DURz=-1.14 有效=0 P11=Neither agree nor disagree Agree Agree Neither agree nor disagree Disagree | P07=  | P10=0 | P12=  | P16= 
+ID=4111 优先级=高 信号=MD+长答+LS DURz=1.14 有效=2 P11=Disagree Disagree Strongly disagree Strongly disagree Disagree | P07=UN FAMILIAR | P10=LE DA IGUAL NINGUNA | P12=  | P16= 
+ID=4123 优先级=高 信号=MD+长答+LS DURz=1.09 有效=1 P11=Strongly agree Agree Strongly agree Strongly agree Disagree | P07=1, 5, 6 | P10=VIOLENCIA DE GENERO, IGUALDAD ENTRE HOMBRES Y MUJERES EN SALARIOS, Y EN TODO EN GENERAL | P12=  | P16=7, 10
+ID=8952 优先级=高 信号=DUR低+长答+LS DURz=-1.38 有效=0 P11=Disagree Agree Agree Agree Agree | P07=  | P10=88 | P12=  | P16= 
+ID=9013 优先级=高 信号=DUR低+长答+LS DURz=-0.94 有效=3 P11=Strongly disagree Strongly agree Strongly agree Strongly agree Strongly agree | P07=TWITTER | P10=99 | P12=MANIFESTARME | P16=VIOLACIONES
+ID=12383 优先级=高 信号=DUR低+长答+LS DURz=-0.95 有效=1 P11=Disagree Agree Agree Strongly agree Strongly agree | P07=2 | P10=PODER LLEGAR A LA IGUALDAD EN LA MORAL DE CADA PERSONA | P12=88 | P16= 
+ID=12413 优先级=高 信号=DUR低+长答+LS DURz=-1.17 有效=1 P11=Agree Agree Agree Agree Disagree | P07=2 | P10=BRECHA SALARIAL, VIOLENCIA MACHISTA | P12=  | P16= 
+ID=12614 优先级=高 信号=DKNA+MD+LS DURz=0.36 有效=2 P11=Disagree Agree Disagree Disagree Agree | P07=CARTELES , EN EL METRO | P10=TODAS | P12=  | P16=10
+ID=18511 优先级=高 信号=DUR低+长答+LS DURz=-0.88 有效=2 P11=Strongly agree Strongly disagree Strongly disagree Strongly disagree Strongly disagree | P07=ESRADIO , ABC, TWITTER | P10=NADA, CUSTODIA COMPARTIDA | P12=  | P16= 
+ID=33086 优先级=高 信号=MD+DUR低 DURz=-0.77 有效=1 P11=Agree Agree Strongly disagree Agree Strongly disagree | P07=COPE | P10=0 | P12=  | P16= 
+ID=42547 优先级=高 信号=MD+DUR高 DURz=2.10 有效=2 P11=Strongly agree Disagree Disagree Agree Strongly disagree | P07=TELEVISION | P10=ERRADICAR LA VIOLENCIA, RECONOCER LAS LABORES Y EL CUIDADO A NO | P12=  | P16= 
+ID=16 优先级=常规 信号=DUR低 DURz=-1.42 有效=0 P11=Strongly agree Strongly agree Disagree Strongly disagree Strongly disagree | P07=  | P10=88 | P12=  | P16= 
+ID=191 优先级=常规 信号=长答+LS DURz=1.63 有效=2 P11=Disagree Agree Agree Disagree Strongly disagree | P07=ABC DIGITAL, 13 TV, INTERECONOMIA TV | P10=NINGUNA | P12=  | P16= 
+ID=765 优先级=常规 信号=MD DURz=1.50 有效=0 P11=Disagree Strongly agree Agree Strongly disagree Agree | P07=1 | P10=0 | P12=  | P16= 
+ID=1417 优先级=常规 信号=DKNA DURz=0.94 有效=0 P11=Strongly agree Agree Strongly agree Strongly agree Strongly agree | P07=1 | P10=88 | P12=  | P16= 
+ID=1529 优先级=常规 信号=DKNA DURz=-0.26 有效=0 P11=DK DK Neither agree nor disagree Agree DK | P07=  | P10=88 | P12=  | P16= 
+ID=1626 优先级=常规 信号=长答+LS DURz=0.23 有效=1 P11=Disagree Agree Agree Agree Strongly agree | P07=3, 4 | P10=TODAS EN GENERAL | P12=1 | P16= 
+ID=2080 优先级=常规 信号=长答+LS DURz=0.45 有效=1 P11=Disagree Agree Agree Agree Disagree | P07=DIGITAL, , , 2 | P10=88 | P12=  | P16= 
+ID=2240 优先级=常规 信号=MD DURz=2.18 有效=1 P11=Strongly agree Strongly disagree Agree Strongly disagree Strongly disagree | P07=1, 5, 6 | P10=MALTRATO, DESIGUALDAD LABORAL | P12=  | P16= 
+ID=2368 优先级=常规 信号=DUR低 DURz=-1.14 有效=0 P11=Disagree Disagree Disagree Agree Disagree | P07=  | P10=88 | P12=  | P16= 
+ID=2409 优先级=常规 信号=DKNA DURz=0.11 有效=1 P11=Disagree Strongly agree Strongly agree Agree Agree | P07=1, 2 | P10=VIOLENCIA MACHISTA | P12=88 | P16= 
+ID=2491 优先级=常规 信号=DKNA+LS DURz=0.08 有效=1 P11=Disagree Agree Agree Agree Agree | P07=5 | P10=IGUALDAD | P12=  | P16= 
+ID=2534 优先级=常规 信号=长答+LS DURz=0.06 有效=1 P11=Strongly disagree Strongly agree Strongly agree Strongly agree Strongly agree | P07=1, 2, 3 | P10=TODO EN GENERAL | P12=1, 9, 10 | P16=2
+ID=3234 优先级=常规 信号=长答+LS DURz=1.50 有效=1 P11=Strongly disagree Strongly agree Agree Strongly agree Agree | P07=1, 5, 6 | P10=IGUALDAD EN GENERAL | P12=1 | P16=9
+ID=3412 优先级=常规 信号=DUR低+LS DURz=-1.06 有效=0 P11=Agree Disagree Disagree Disagree Disagree | P07=  | P10=0 | P12=  | P16= 
+ID=3651 优先级=常规 信号=DUR低 DURz=-0.74 有效=0 P11=Agree Strongly agree Disagree Disagree Disagree | P07=  | P10=88 | P12=  | P16= 
+ID=4097 优先级=常规 信号=MD DURz=1.98 有效=1 P11=Strongly agree Agree Disagree Strongly agree Strongly agree | P07=2, 5, 7 | P10=IGUALDAD | P12=  | P16= 
+ID=4310 优先级=常规 信号=DUR低+LS DURz=-0.78 有效=0 P11=Disagree Agree Agree Strongly agree Strongly agree | P07=2 | P10=99 | P12=1 | P16= 
+ID=4691 优先级=常规 信号=MD DURz=0.66 有效=1 P11=Strongly disagree Strongly disagree Strongly agree Agree Disagree | P07=1, 5, 6 | P10=TODAS SON IMPORTANTES | P12=  | P16= 
+ID=4937 优先级=常规 信号=DKNA DURz=0.18 有效=0 P11=DK Strongly disagree Strongly agree DK Agree | P07=  | P10=88 | P12=  | P16= 
+ID=4982 优先级=常规 信号=DUR低 DURz=-1.14 有效=0 P11=Agree Agree Agree Agree Disagree | P07=  | P10=0 | P12=  | P16= 
+ID=5089 优先级=常规 信号=DKNA DURz=1.05 有效=0 P11=Agree Strongly agree Strongly agree DK DK | P07=  | P10=88 | P12=  | P16= 
+ID=5326 优先级=常规 信号=DUR低+LS DURz=-0.74 有效=1 P11=Agree Strongly agree Strongly agree Agree Disagree | P07=1 | P10=TODAS SON IMPORTANTES | P12=  | P16= 
+ID=5358 优先级=常规 信号=DKNA+LS DURz=0.06 有效=1 P11=Strongly agree Agree Agree Agree Agree | P07=1 | P10=TODAS EN GENERAL | P12=88 | P16= 
+ID=5455 优先级=常规 信号=长答+LS DURz=-0.34 有效=0 P11=Disagree Agree Agree Agree Agree | P07=  | P10=88 | P12=  | P16= 
+ID=5973 优先级=常规 信号=长答+LS DURz=0.01 有效=0 P11=Disagree Agree Agree Agree Disagree | P07=1 | P10=0 | P12=  | P16= 
+ID=6006 优先级=常规 信号=DUR低 DURz=-0.85 有效=0 P11=Agree Strongly agree Strongly agree Strongly agree Agree | P07=  | P10=0 | P12=1 | P16=3
+ID=6023 优先级=常规 信号=MD DURz=-0.61 有效=1 P11=Strongly agree Strongly agree Disagree Strongly agree Strongly agree | P07=2, 3 | P10=TODAS EN GENERAL | P12=1 | P16= 
+ID=6163 优先级=常规 信号=DKNA DURz=0.64 有效=0 P11=DK Disagree Agree nan nan | P07=  | P10=88 | P12=  | P16= 
+ID=6222 优先级=常规 信号=长答+LS DURz=0.98 有效=0 P11=DK DK Agree Disagree Disagree | P07=1, 6 | P10=0 | P12=  | P16= 
+ID=6419 优先级=常规 信号=MD DURz=-0.26 有效=1 P11=Strongly disagree Disagree Disagree Agree Strongly disagree | P07=2 | P10=TODAS EN GENERAL | P12=  | P16= 
+ID=6628 优先级=常规 信号=DUR低 DURz=-0.85 有效=0 P11=Agree Agree Agree Agree Strongly disagree | P07=6 | P10=88 | P12=  | P16= 
+ID=6652 优先级=常规 信号=DUR低 DURz=-0.88 有效=0 P11=Disagree Agree Disagree Disagree Strongly disagree | P07=  | P10=0 | P12=  | P16= 
+ID=6791 优先级=常规 信号=DUR低 DURz=-1.14 有效=0 P11=Neither agree nor disagree Agree Agree Disagree Disagree | P07=  | P10=88 | P12=  | P16= 
+ID=6967 优先级=常规 信号=长答+LS DURz=0.32 有效=3 P11=Strongly disagree Strongly agree Strongly agree Strongly agree Strongly agree | P07=COLEGIOS, , , 1, 2, 6 | P10=LE PARECEN TODAS IMPORTANTES | P12=1 | P16=CONTRA DE LOS COLEGIOS PRIVADOS
+ID=7022 优先级=常规 信号=DKNA DURz=0.03 有效=1 P11=Strongly agree Strongly agree Strongly agree Disagree Disagree | P07=1, 6 | P10=IGUALDAD SALARIAL, VIOLENCIA DE GENERO | P12=  | P16=10
+ID=7061 优先级=常规 信号=DUR低+LS DURz=-1.02 有效=0 P11=Disagree Agree Agree Agree Disagree | P07=  | P10=88 | P12=  | P16= 
+ID=7066 优先级=常规 信号=DUR低 DURz=-0.85 有效=0 P11=Strongly agree Agree Agree Disagree Strongly disagree | P07=  | P10=0 | P12=  | P16=10
+ID=7300 优先级=常规 信号=MD+LS DURz=-0.20 有效=0 P11=Strongly agree Agree Strongly disagree Agree Strongly disagree | P07=6 | P10=0 | P12=  | P16= 
+ID=7468 优先级=常规 信号=DUR高 DURz=2.85 有效=1 P11=Agree Agree Agree Disagree Disagree | P07=9 | P10=IGUALDAD EN EL SALARIO, IGUALDAD EN GENERAL | P12=  | P16=10
+ID=7527 优先级=常规 信号=MD DURz=-0.09 有效=2 P11=Strongly disagree Strongly agree Disagree Strongly agree Strongly agree | P07=SINDICATOS, , , 3 | P10=IGUALDAD DE TRATO, SALARIO, JUSTICIA | P12=1, 2 | P16=2, 3, 5
+ID=7639 优先级=常规 信号=DUR低 DURz=-0.88 有效=0 P11=Disagree Agree Strongly agree Agree Disagree | P07=1 | P10=0 | P12=  | P16= 
+ID=8331 优先级=常规 信号=长答+LS DURz=0.27 有效=1 P11=Strongly disagree Strongly agree Strongly agree Strongly agree Strongly agree | P07=3, 5, 6 | P10=VIOLENCIA MACHISTA | P12=1 | P16= 
+ID=8835 优先级=常规 信号=DUR低 DURz=-0.81 有效=0 P11=Disagree Agree Disagree Agree Disagree | P07=1 | P10=0 | P12=  | P16= 
+ID=9048 优先级=常规 信号=MD DURz=-0.02 有效=0 P11=Disagree Strongly disagree Strongly agree Strongly disagree Strongly disagree | P07=  | P10=0 | P12=  | P16= 
+ID=9227 优先级=常规 信号=长答+LS DURz=-0.49 有效=1 P11=Agree Agree Disagree Strongly disagree Strongly disagree | P07=1, 2, 5 | P10=IGUALDAD SALARIAL | P12=  | P16= 
+ID=9324 优先级=常规 信号=长答+LS DURz=0.13 有效=1 P11=Disagree Agree Agree Agree Agree | P07=1 | P10=TODO EN GENERAL | P12=1, 2 | P16= 
+ID=9506 优先级=常规 信号=长答+LS DURz=-0.43 有效=0 P11=Disagree Agree Agree Agree Agree | P07=  | P10=88 | P12=88 | P16= 
+ID=10664 优先级=常规 信号=DKNA DURz=0.41 有效=1 P11=Agree Agree Agree Agree Agree | P07=1 | P10=LA BRECHA SALARIAL | P12=88 | P16= 
+ID=10912 优先级=常规 信号=DKNA DURz=-0.26 有效=0 P11=nan Disagree Agree DK DK | P07=  | P10=88 | P12=  | P16= 
+ID=11184 优先级=常规 信号=DUR低 DURz=-0.74 有效=0 P11=Neither agree nor disagree Agree Strongly agree Neither agree nor disagree Disagree | P07=  | P10=99 | P12=  | P16= 
+ID=11327 优先级=常规 信号=DUR低 DURz=-0.85 有效=1 P11=Strongly agree Strongly agree Strongly agree Disagree Disagree | P07=1, 2, 5, 6 | P10=SISTEMA JUDICIAL | P12=  | P16= 
+ID=11366 优先级=常规 信号=DUR低 DURz=-0.95 有效=0 P11=Neither agree nor disagree Agree Agree Neither agree nor disagree Neither agree nor disagree | P07=  | P10=99 | P12=  | P16= 
+ID=11941 优先级=常规 信号=DKNA DURz=0.66 有效=1 P11=Agree DK Agree Strongly agree Neither agree nor disagree | P07=1 | P10=88 | P12=FUI A LA MASCLETA DEDICADA A LA MUJER | P16= 
+ID=11943 优先级=常规 信号=MD DURz=0.39 有效=1 P11=Agree Disagree Strongly agree Strongly disagree Strongly disagree | P07=1, 7 | P10=88 | P12=  | P16=LEY MORDAZA
+ID=12310 优先级=常规 信号=DUR低 DURz=-0.88 有效=2 P11=Disagree Disagree Disagree Strongly disagree Strongly disagree | P07=RADIO | P10=IGUALDAD LABORAL | P12=  | P16= 
+ID=12324 优先级=常规 信号=MD+LS DURz=-0.37 有效=0 P11=Strongly disagree Strongly disagree Strongly disagree Strongly disagree Strongly disagree | P07=6 | P10=0 | P12=  | P16= 
+ID=12354 优先级=常规 信号=DUR低 DURz=-0.88 有效=0 P11=Agree Strongly agree Strongly agree Strongly agree Strongly agree | P07=6 | P10=88 | P12=  | P16= 
+ID=12522 优先级=常规 信号=长答+LS DURz=0.03 有效=1 P11=Disagree Agree Agree Agree Agree | P07=  | P10=BRECHA SALARIAL | P12=  | P16= 
+ID=12635 优先级=常规 信号=DUR低+LS DURz=-0.81 有效=1 P11=Strongly agree Neither agree nor disagree Agree Disagree Disagree | P07=1 | P10=VIOLENCIA DE GENERO | P12=  | P16= 
+ID=12737 优先级=常规 信号=长答+LS DURz=1.54 有效=3 P11=Strongly disagree Strongly agree Strongly agree Strongly agree Strongly agree | P07=DIAEIO PUBLICO , DIARIO PUBLICO , , 6 | P10=EQUIPARAR A LA MUJER | P12=EN UNA CHARLA EN UN BARRIO VA A DICTAR LA CHARLA | P16=7, 9, 10
+ID=12749 优先级=常规 信号=长答+LS DURz=-0.16 有效=4 P11=Disagree Agree Strongly agree Agree Agree | P07=TV, PAPEL, RADIO | P10=IGUALDAD, MISMOS OBJETIVOS | P12=SEGUIR LA MOVILIZACION | P16=DEFENSA DERECHOS MUJER
+ID=12917 优先级=常规 信号=DUR低 DURz=-0.99 有效=1 P11=Disagree Strongly agree Strongly agree Agree Agree | P07=6 | P10=TODAS | P12=1 | P16= 
+ID=12925 优先级=常规 信号=DKNA DURz=1.15 有效=1 P11=DK Strongly disagree Agree Agree Agree | P07=1 | P10=RESPETO Y CONSIDERACION HACIA LA MUJER | P12=  | P16= 
+ID=13151 优先级=常规 信号=DKNA DURz=1.78 有效=0 P11=DK Agree Agree Agree DK | P07=  | P10=88 | P12=  | P16= 
+ID=13429 优先级=常规 信号=MD DURz=0.06 有效=1 P11=Disagree Strongly agree Strongly disagree Agree Strongly disagree | P07=6 | P10=IGUALDAD SALARIAL | P12=  | P16= 
+ID=13490 优先级=常规 信号=DKNA DURz=0.83 有效=0 P11=Neither agree nor disagree Strongly disagree Disagree Agree Agree | P07=5 | P10=99 | P12=  | P16= 
+ID=13555 优先级=常规 信号=DKNA DURz=0.74 有效=1 P11=Strongly agree Agree Strongly agree Strongly agree Strongly agree | P07=  | P10=IGUALDAD EN GENERAL | P12=1 | P16=10
+ID=13765 优先级=常规 信号=长答+LS DURz=-0.02 有效=2 P11=Neither agree nor disagree Strongly agree Strongly agree Agree Agree | P07=PANFLETOS METRO, , , 1 | P10=IGUALDAD | P12=3 | P16= 
+ID=14126 优先级=常规 信号=DUR低 DURz=-0.74 有效=1 P11=Neither agree nor disagree Agree Strongly agree Agree Agree | P07=2 | P10=IGUALDAD | P12=1 | P16=2, 7
+ID=14240 优先级=常规 信号=MD DURz=0.80 有效=0 P11=Agree Disagree Strongly agree Disagree Agree | P07=2 | P10=88 | P12=  | P16= 
+ID=14536 优先级=常规 信号=MD+LS DURz=-0.31 有效=0 P11=Strongly agree Disagree Disagree Agree Strongly disagree | P07=1 | P10=0 | P12=  | P16= 
+ID=14586 优先级=常规 信号=DKNA DURz=1.33 有效=0 P11=Disagree Agree Agree Strongly disagree Strongly disagree | P07=1, 6 | P10=88 | P12=  | P16= 
+ID=15337 优先级=常规 信号=DUR低 DURz=-0.74 有效=1 P11=Neither agree nor disagree Strongly agree Strongly agree Strongly agree Agree | P07=2 | P10=VIOLENCIA MACHISTA | P12=1 | P16=10
+ID=15515 优先级=常规 信号=DUR低 DURz=-0.88 有效=0 P11=Strongly agree Strongly disagree Disagree Strongly disagree Strongly disagree | P07=  | P10=0 | P12=  | P16= 
+ID=15639 优先级=常规 信号=DUR高 DURz=2.86 有效=1 P11=Strongly agree Agree Disagree Disagree Disagree | P07=1, 3 | P10=IGUALDAD EN GENERAL | P12=  | P16= 
+ID=15926 优先级=常规 信号=MD DURz=-0.15 有效=0 P11=Strongly disagree Agree Strongly agree Strongly disagree Strongly disagree | P07=1, 2, 6, 7 | P10=0 | P12=  | P16= 
+ID=16403 优先级=常规 信号=DKNA DURz=0.54 有效=0 P11=Agree Disagree Agree Agree Agree | P07=1 | P10=99 | P12=9 | P16= 
+ID=16705 优先级=常规 信号=DUR低 DURz=-0.81 有效=2 P11=Agree Agree Agree Disagree Disagree | P07=SINDICATOS , EN MI TRABAJO, , 1 | P10=LA IGUALDAD | P12=  | P16= 
+ID=17007 优先级=常规 信号=DUR低 DURz=-1.25 有效=0 P11=Strongly agree Disagree Disagree Disagree Disagree | P07=2 | P10=0 | P12=  | P16= 
+ID=17233 优先级=常规 信号=长答+LS DURz=0.99 有效=4 P11=Disagree Agree Agree Agree Agree | P07=TV, PRENSA | P10=IGUALDAD | P12=MANIFESTARME | P16=PENSIONES
+ID=17325 优先级=常规 信号=长答+LS DURz=-0.40 有效=1 P11=Strongly disagree Strongly agree Agree Strongly agree Disagree | P07=2, 6 | P10=TODO EN GENERAL | P12=  | P16= 
+ID=17863 优先级=常规 信号=DKNA DURz=0.94 有效=1 P11=DK Agree Agree Neither agree nor disagree Disagree | P07=3, 4 | P10=PRESENCIA DE LA MUJER, IGUALDAD EN GENERAL | P12=1 | P16=10
+ID=18773 优先级=常规 信号=长答+LS DURz=-0.04 有效=1 P11=Disagree Agree Agree Strongly agree Disagree | P07=1 | P10=PROTECCION CONTRA LAS MUJERES | P12=  | P16= 
+ID=18859 优先级=常规 信号=长答+LS DURz=0.11 有效=2 P11=Strongly disagree Strongly agree Agree Disagree Disagree | P07=2, 6 | P10=TODAS | P12=AYUDAR EN ALGO | P16= 
+ID=18873 优先级=常规 信号=MD DURz=-0.37 有效=1 P11=Disagree Strongly disagree Disagree Strongly agree Agree | P07=TRANSPORTE PUBLICO | P10=0 | P12=1 | P16= 
+ID=19007 优先级=常规 信号=长答+LS DURz=0.89 有效=1 P11=Agree Agree Strongly agree Strongly agree Strongly agree | P07=4 | P10=MALTRATO | P12=1, 8 | P16=5, 10
+ID=19012 优先级=常规 信号=DUR低 DURz=-0.85 有效=0 P11=Strongly disagree Agree Agree Agree Disagree | P07=1 | P10=0 | P12=  | P16= 
+ID=19146 优先级=常规 信号=长答+LS DURz=-0.04 有效=1 P11=Disagree Agree Agree Strongly agree Strongly agree | P07=1, 6 | P10=IGUALDAD | P12=1, 2 | P16=9
+ID=19194 优先级=常规 信号=长答+LS DURz=0.37 有效=3 P11=Strongly disagree Strongly agree Strongly agree Agree Agree | P07=INSTAGRAM , AMIGOS | P10=IGUALDAD, PROTECION | P12=IR A LA MANIFESTACION | P16= 
+ID=19305 优先级=常规 信号=长答+LS DURz=-0.61 有效=0 P11=Strongly agree Strongly disagree Strongly disagree Strongly disagree Strongly disagree | P07=3, 7 | P10=0 | P12=  | P16= 
+ID=19447 优先级=常规 信号=DUR低 DURz=-0.80 有效=3 P11=Strongly disagree Strongly agree Strongly agree Strongly agree Agree | P07=INTERNET, TELEVISION | P10=IGUALDAD ENTRE HOMBRES Y MUJERES | P12=ASISTIR A LA MANIFESTACION | P16= 
+ID=20354 优先级=常规 信号=DUR低 DURz=-0.88 有效=1 P11=Agree Strongly agree Strongly agree Agree Agree | P07=1, 6 | P10=LA IGUALDAD | P12=1 | P16= 
+ID=20427 优先级=常规 信号=长答+LS DURz=0.82 有效=0 P11=Disagree Agree Agree Agree Agree | P07=1 | P10=88 | P12=  | P16= 
+ID=20520 优先级=常规 信号=长答+LS DURz=-0.23 有效=1 P11=Strongly disagree Strongly agree Agree Strongly agree Disagree | P07=1, 5, 6 | P10=IGUALDAD SALARIAL | P12=  | P16= 
+ID=20945 优先级=常规 信号=长答+LS DURz=0.88 有效=4 P11=Disagree Strongly agree Strongly agree Strongly agree Strongly agree | P07=TELEVISION , RADIO, INTERNET | P10=ACABAR CON LA VIOLENCIA MACHISTA , IGUALDAD SALARIAL | P12=MANIFESTACION , ACTO INSTITUCIONAL | P16=A FAVOR DE LOS DERECHOS QUE VOX QUIERE ELIMINAR
+ID=21069 优先级=常规 信号=DUR高 DURz=2.67 有效=1 P11=Agree Neither agree nor disagree Strongly agree Agree Agree | P07=2, 6, 7 | P10=MALTRATO | P12=  | P16=8, 10
+ID=21357 优先级=常规 信号=长答+LS DURz=0.93 有效=1 P11=Disagree Agree Agree Agree Agree | P07=1, 2, 6 | P10=IGUAL EN GENERAL | P12=1 | P16=7, 10
+ID=21811 优先级=常规 信号=DUR低 DURz=-1.00 有效=2 P11=Disagree Strongly agree Strongly agree Agree Disagree | P07=TV, PRENSA DIGITAL, RADIO | P10=LUCHA CONTRA VIOLENCIA DE GENERO, IGUALDAD SALARIAL | P12=  | P16= 
+ID=21851 优先级=常规 信号=长答+LS DURz=0.01 有效=2 P11=Strongly agree Strongly agree Agree Disagree Disagree | P07=LA GENTE | P10=NINGUNA | P12=  | P16= 
+ID=24229 优先级=常规 信号=DUR低+LS DURz=-1.29 有效=0 P11=Disagree Agree Agree Agree Agree | P07=1 | P10=0 | P12=1 | P16= 
+ID=25752 优先级=常规 信号=DUR低 DURz=-1.07 有效=2 P11=Agree Strongly agree Strongly agree Strongly agree Strongly agree | P07=TV, RADIO | P10=99 | P12=PARON DE 1H | P16=88
+ID=26397 优先级=常规 信号=DUR低 DURz=-0.74 有效=0 P11=Agree Disagree Disagree Strongly disagree Strongly disagree | P07=1, 5, 6 | P10=0 | P12=  | P16= 
+ID=26900 优先级=常规 信号=DKNA+LS DURz=-0.43 有效=1 P11=Agree Strongly agree Agree Agree Agree | P07=1, 2 | P10=LEGISLACION | P12=1 | P16= 
+ID=27898 优先级=常规 信号=DUR低 DURz=-0.85 有效=1 P11=Disagree Agree Agree Strongly disagree Strongly disagree | P07=COLEGIO DE MIS HIJOS, COMPAÑEROS DE TRABAJO | P10=88 | P12=  | P16= 
+ID=28882 优先级=常规 信号=长答+LS DURz=2.42 有效=2 P11=Strongly disagree Strongly agree Strongly agree Strongly agree Agree | P07=1 | P10=MALTRTATO, VIOLENCIA DE GENERO | P12=EN UNA MOVILIZACION ORGANIZADA POR EL AYUNTAMIENTO DE MI PUEBLO | P16= 
+ID=33411 优先级=常规 信号=长答+LS DURz=1.23 有效=2 P11=Agree Disagree Agree Disagree Disagree | P07=REDES SOCIALES , TV, EN CALLE | P10=IGUALDAD , IGUALDAD | P12=  | P16= 
+ID=34614 优先级=常规 信号=长答+LS DURz=-0.21 有效=4 P11=Disagree Strongly agree Strongly agree Strongly agree Strongly agree | P07=REDES SOCIALES, INFORMACION PERSONA A PERSONA, PARTIDO POLITICO | P10=IGUALDAD, JUSTICIA | P12=PARO SIMBOLICO, SUSTITUCION A MUJER POR HUELGA, ASISTENCIA A LA MANIFESTACION | P16=DESAHUCIO, LEY MORDAZA, INDEPENDENCIA CATALUNYA
+ID=44123 优先级=常规 信号=MD+LS DURz=-0.05 有效=2 P11=Strongly disagree Strongly agree Disagree Strongly agree Agree | P07=TELEVISION | P10=REGULACION DE SUELDOS | P12=99 | P16= 
